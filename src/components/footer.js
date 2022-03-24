@@ -64,6 +64,7 @@ function Footer(props) {
                    </div>
                </div>
            </div>
+            <button>test</button>
             <div className="bottomFooter">
                 <div className="text">
                     Axborot texnologiyalar markazi 2022
