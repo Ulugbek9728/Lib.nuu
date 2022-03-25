@@ -68,7 +68,7 @@ function Footer(props) {
                 <div className="text">
                     Axborot texnologiyalar markazi 2022
                 </div>
-                <a href="#" target="_blank">
+                <a href="https://telegram.me/creative_bro_01" target="_blank">
                     <img src="../img/Creative bro.svg" alt=""/>
                 </a>
             </div>

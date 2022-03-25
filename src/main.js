@@ -38,9 +38,6 @@ function Main(props) {
                                 <Link to="#">
                                     <button className='btn'>Uzb</button>
                                 </Link>
-                                <Link to="#">
-                                    <button className='btn'>Rus</button>
-                                </Link>
 
                             </div>
                         </div>
@@ -235,7 +232,6 @@ function Main(props) {
                         <div className="col-6 yangilikBox">
                             <div className="yangilik">
                                 <div className="ten">
-                                    <p>by ANDREA NIECOLES   17 MIN  AGO</p>
                                     <p>Meet the family keeping
                                         Lisbon’s classic car flame
                                         burning

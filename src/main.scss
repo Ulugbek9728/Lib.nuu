@@ -190,7 +190,7 @@
     .title {
       font-style: normal;
       font-weight: 800;
-      font-size: 50px;
+      font-size: 40px;
       line-height: 59px;
       color: #44484E;
       margin: 60px 0 30px 110px;
@@ -301,7 +301,7 @@
 
       .titleYangi{
         font-weight: 600;
-        font-size: 63.7384px;
+        font-size: 40px;
         line-height: 130%;
         color: #44484E;
         margin-bottom: 60px;
@@ -326,25 +326,19 @@
             height: 100%;
             padding: 30px 50px;
             background: rgba(0, 0, 0, 0.2);
+
             p:nth-of-type(1){
-              font-weight: 400;
-              font-size: 20px;
-              line-height: 23px;
-              text-transform: uppercase;
-              color: #FFFFFF;
-            }
-            p:nth-of-type(2){
               font-weight: 700;
-              font-size: 50px;
+              font-size: 40px;
               line-height: 59px;
               color: #FFFFFF;
               margin-top: 25px;
             }
 
-            p:nth-of-type(3){
+            p:nth-of-type(2){
               font-weight: 400;
-              font-size: 30px;
-              line-height: 35px;
+              font-size: 24px;
+              line-height: 30px;
               color: #FFFFFF;
               margin-top: 50px;
               letter-spacing: 0.5px;
@@ -447,7 +441,7 @@
     text-align: left;
     font-style: normal;
     font-weight: 600;
-    font-size: 63.7384px;
+    font-size: 40px;
     line-height: 130%;
     color: #44484E;
   }
