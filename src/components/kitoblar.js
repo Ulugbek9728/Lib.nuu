@@ -28,25 +28,6 @@ function Kitoblar(props) {
                         </div>
                     </div>
                 </div>
-                <div className="titleKatalog">
-                    Katalog boyicha qidiring
-                </div>
-                <div className="navbar">
-                    <div><a href="#">Matematika</a></div>
-                    <div><a href="#">Dasturlash</a></div>
-                    <div><a href="#">Fizika</a></div>
-                    <div><a href="#">Kimyo</a></div>
-                    <div><a href="#">Biologiya</a></div>
-                    <div><a href="#">Ijtimoiy</a></div>
-                    <div><a href="#">Tarix</a></div>
-                    <div><a href="#">Geografiya</a></div>
-                    <div><a href="#">Xorijiy tillar</a></div>
-                    <div><a href="#">Geologiya</a></div>
-                    <div><a href="#">Ekologiya</a></div>
-                    <div><a href="#">Gidrometeorologiya</a></div>
-                    <div><a href="#">Sport</a></div>
-                    <div><a href="#">Iqtisodiyot</a></div>
-                </div>
             </div>
             <Footer/>
         </>

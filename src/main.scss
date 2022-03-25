@@ -193,12 +193,12 @@
       font-size: 50px;
       line-height: 59px;
       color: #44484E;
-      margin: 60px 0 30px 0;
+      margin: 60px 0 30px 110px;
     }
   }
 
   .container-fluid {
-    .row {
+    .rowFluid {
       width: 1705px;
       margin: 0 auto;
 
@@ -298,6 +298,116 @@
 
         }
       }
+
+      .titleYangi{
+        font-weight: 600;
+        font-size: 63.7384px;
+        line-height: 130%;
+        color: #44484E;
+        margin-bottom: 60px;
+      }
+
+      .yangilikBox{
+        width:810px;
+        padding: 0 20px 0 0;
+        margin-bottom: 80px;
+        .yangilik{
+          width: 790px;
+          height: 983px;
+          border-radius: 25px;
+          background-image: url("./img/mers.png");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          padding: 0;
+          overflow: hidden;
+
+          .ten{
+            width: 100%;
+            height: 100%;
+            padding: 30px 50px;
+            background: rgba(0, 0, 0, 0.2);
+            p:nth-of-type(1){
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 23px;
+              text-transform: uppercase;
+              color: #FFFFFF;
+            }
+            p:nth-of-type(2){
+              font-weight: 700;
+              font-size: 50px;
+              line-height: 59px;
+              color: #FFFFFF;
+              margin-top: 25px;
+            }
+
+            p:nth-of-type(3){
+              font-weight: 400;
+              font-size: 30px;
+              line-height: 35px;
+              color: #FFFFFF;
+              margin-top: 50px;
+              letter-spacing: 0.5px;
+              width: 556px;
+            }
+          }
+
+        }
+      }
+
+
+
+      .Yangiliklar{
+        width: 880px;
+        .right{
+          width: 440px;
+          padding: 0 20px;
+          img{
+            width: 400px;
+            height: 300px;
+          }
+          p{
+            margin: 30px 0 40px 0;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: #44484E;
+            height: 56px;
+          }
+
+          .boxcha{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 4px 0 40px 0;
+
+            .left{
+              img{
+                width: 20px;
+                height: auto;
+              }
+              span{
+                margin-left: 18px;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 16px;
+                color: #44484E;
+              }
+            }
+            button{
+              width: 100px;
+              height: 30px;
+              background: #4470B2;
+              border-radius: 27.8902px;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 19px;
+              color: #FFFFFF;
+            }
+          }
+        }
+
+      }
     }
 
   }
@@ -333,8 +443,8 @@
   }
 
   .galereya{
-    margin: 70px 0 60px 0;
-    text-align: center;
+    margin: 70px 0 60px 100px;
+    text-align: left;
     font-style: normal;
     font-weight: 600;
     font-size: 63.7384px;

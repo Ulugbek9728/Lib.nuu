@@ -36,10 +36,10 @@ function Main(props) {
                                 </Link>
 
                                 <Link to="#">
-                                    <button className='btn'>O'zbek</button>
+                                    <button className='btn'>Uzb</button>
                                 </Link>
-                                <Link to="/Kirish">
-                                    <button className='btn'>Kirish</button>
+                                <Link to="#">
+                                    <button className='btn'>Rus</button>
                                 </Link>
 
                             </div>
@@ -61,13 +61,13 @@ function Main(props) {
                     </div>
                 </div>
                 <div className="Kitoblar">
-                    <div className="title" align={"center"}>
+                    <div className="title" align={"left"}>
                         Eng ko’p qidirilgan kitoblar
                     </div>
                     <hr/>
                 </div>
                 <div className="container-fluid">
-                    <div className="row">
+                    <div className="row rowFluid">
                         <div className="col-lg-6">
                             <div className="Kitob_card">
                                 <div className="boxcha">
@@ -230,6 +230,85 @@ function Main(props) {
                         <button className="btn barchasi">
                             <Link to="/Kitoblar"> Barchasini korish</Link>
                         </button>
+
+                        <div className="titleYangi">Yangiliklar</div>
+                        <div className="col-6 yangilikBox">
+                            <div className="yangilik">
+                                <div className="ten">
+                                    <p>by ANDREA NIECOLES   17 MIN  AGO</p>
+                                    <p>Meet the family keeping
+                                        Lisbon’s classic car flame
+                                        burning
+                                    </p>
+                                    <p>When a miltary coup turned Portugal opsida down in
+                                        1974, it marked the down of democracy for the
+                                        previcusiy autoritarian nation
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div className="col-6 Yangiliklar">
+                            <div className="row">
+                                <div className="col-6 right">
+                                    <img src="./img/women.png" alt=""/>
+                                    <p>
+                                        Krestian Stewn Was Seen ILaving Lunch in toronto with Boyfriend
+                                    </p>
+                                    <hr/>
+                                    <div className="boxcha">
+                                        <div className="left">
+                                            <img src="./img/Group5.png" alt=""/>
+                                            <span>101 Ko’rilgan</span>
+                                        </div>
+                                        <button className='btn'>Batafsil</button>
+                                    </div>
+                                </div>
+                                <div className="col-6 right">
+                                    <img src="./img/men.png" alt=""/>
+                                    <p>
+                                        Krestian Stewn Was Seen ILaving Lunch in toronto with Boyfriend
+                                    </p>
+                                    <hr/>
+                                    <div className="boxcha">
+                                        <div className="left">
+                                            <img src="./img/Group5.png" alt=""/>
+                                            <span>101 Ko’rilgan</span>
+                                        </div>
+                                        <button className='btn'>Batafsil</button>
+                                    </div>
+                                </div>
+                                <div className="col-6 right">
+                                    <img src="./img/women.png" alt=""/>
+                                    <p>
+                                        Krestian Stewn Was Seen ILaving Lunch in toronto with Boyfriend
+                                    </p>
+                                    <hr/>
+                                    <div className="boxcha">
+                                        <div className="left">
+                                            <img src="./img/Group5.png" alt=""/>
+                                            <span>101 Ko’rilgan</span>
+                                        </div>
+                                        <button className='btn'>Batafsil</button>
+                                    </div>
+                                </div>
+                                <div className="col-6 right">
+                                    <img src="./img/men.png" alt=""/>
+                                    <p>
+                                        Krestian Stewn Was Seen ILaving Lunch in toronto with Boyfriend
+                                    </p>
+                                    <hr/>
+                                    <div className="boxcha">
+                                        <div className="left">
+                                            <img src="./img/Group5.png" alt=""/>
+                                            <span>101 Ko’rilgan</span>
+                                        </div>
+                                        <button className='btn'>Batafsil</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

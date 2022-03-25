@@ -37,9 +37,9 @@ function Footer(props) {
                            </a>
                        </div>
                        <div className="box">
-                           <a href="tel:+99845770082">
+                           <a href="tel:+998945770082">
                                <img src="../img/Vector.png" alt=""/>
-                               <div>+9984 577 00 82</div>
+                               <div>+99894 577 00 82</div>
                            </a>
                        </div>
                        <div className="box">
