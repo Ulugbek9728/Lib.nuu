@@ -1,5 +1,5 @@
-*{
-  a{
+* {
+  a {
     text-decoration: none;
   }
 }
@@ -21,7 +21,7 @@
     }
   }
 
-  .container-fluid{
+  .container-fluid {
     width: 1708px;
     margin: 0 auto;
 
@@ -70,16 +70,18 @@
       }
 
     }
-    .karta:nth-of-type(2){
+
+    .karta:nth-of-type(2) {
       width: 300px;
     }
-    .karta:nth-of-type(3){
+
+    .karta:nth-of-type(3) {
       width: 430px;
     }
 
   }
 
-  .bottomFooter{
+  .bottomFooter {
     width: 100%;
     height: 60px;
     margin-top: 50px;
@@ -88,7 +90,7 @@
     position: relative;
 
 
-    .text{
+    .text {
       margin-top: 21px;
       font-weight: 300;
       font-size: 14px;
@@ -100,11 +102,13 @@
       text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 
     }
-    a{
+
+    a {
       position: absolute;
       bottom: 21px;
       right: 140px;
-      img{
+
+      img {
 
         width: 150px;
         height: auto;
@@ -113,4 +117,684 @@
   }
 
 
+}
+
+@media (max-width: 576px) {
+  .footer {
+    width: 100%;
+    height: 600px;
+    padding-top: 15px;
+
+    .logo {
+      margin: 0 auto;
+      width: 132px;
+      height: 53px;
+    }
+
+    .container-fluid {
+      position: relative;
+      width: 370px;
+      padding: 0;
+      margin: 0 auto;
+
+      .karta {
+        margin-top: 10px;
+        img {
+          width: 150px;
+          height: 150px;
+        }
+
+        .box {
+          margin-top: 15px;
+
+          a {
+            font-size: 18px;
+
+            img {
+              width: 15px;
+              height: auto;
+            }
+
+            div {
+              margin-left: 20px;
+              font-size: 12px;
+              line-height: 20px;
+            }
+          }
+        }
+
+        .maps {
+          margin: 20px 0 0 15px;
+          border-radius: 14px;
+          width: 92%;
+          height: 170px;
+        }
+
+      }
+
+      .karta:nth-of-type(2) {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 30px;
+          background: rgba(66, 103, 160, 0.71);
+          backdrop-filter: blur(12px);
+          border-radius: 6px;
+          margin-top: 10px;
+
+          a {
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      .karta:nth-of-type(3) {
+        position: absolute;
+        top: 360px;
+        left: 10px;
+        width: 100%;
+      }
+    }
+
+    .bottomFooter {
+      width: 100%;
+      height: 50px;
+      margin-top: 40px;
+      top: 100px;
+      .text {
+        margin: 21px 0 0 20px;
+        font-size: 10px;
+        line-height: 130%;
+        letter-spacing: 1px;
+        text-align: left;
+      }
+
+      a {
+        bottom: 12px;
+        right: 20px;
+
+        img {
+          width: 50px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+  .footer {
+    width: 100%;
+    height: 630px;
+    box-sizing: border-box;
+    padding-top: 30px;
+
+    .logo {
+      margin: 0 auto;
+      width: 250px;
+      height: 100px;
+    }
+
+    .container-fluid {
+      position: relative;
+      width: 570px;
+      padding: 0;
+      margin: 0 auto;
+
+      .karta {
+        margin-top: 20px;
+
+        img {
+          width: 200px;
+          height: 200px;
+        }
+
+        .box {
+          margin-top: 20px;
+
+          a {
+            font-size: 18px;
+
+            img {
+              width: 20px;
+              height: auto;
+            }
+
+            div {
+              margin-left: 20px;
+              font-size: 15px;
+              line-height: 20px;
+            }
+          }
+        }
+
+        .maps {
+          margin: 40px 0 0 15px;
+          border-radius: 14px;
+          width: 240px;
+          height: 170px;
+        }
+
+      }
+
+      .karta:nth-of-type(2) {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 40px;
+          background: rgba(66, 103, 160, 0.71);
+          backdrop-filter: blur(12px);
+          border-radius: 6px;
+          margin-top: 20px;
+
+          a {
+            font-size: 18px;
+
+            img {
+              width: 25px;
+              height: auto;
+            }
+
+            div {
+              margin-left: 20px;
+              font-size: 18px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+
+      .karta:nth-of-type(3) {
+        position: absolute;
+        top: 250px;
+        right: 0;
+        width: 50%;
+      }
+    }
+
+    .bottomFooter {
+      width: 100%;
+      height: 60px;
+      margin-top: 40px;
+
+      .text {
+        margin: 21px 0 0 20px;
+        font-size: 12px;
+        line-height: 130%;
+        letter-spacing: 1px;
+        text-align: left;
+      }
+
+      a {
+        bottom: 21px;
+        right: 20px;
+
+        img {
+          width: 80px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) and (min-width: 767px) {
+  .footer {
+    width: 100%;
+    height: 521px;
+    box-sizing: border-box;
+    padding-top: 30px;
+
+    .logo {
+      margin: 0 auto;
+      width: 250px;
+      height: 100px;
+    }
+
+    .container-fluid {
+      position: relative;
+      width: 750px;
+      margin: 0 auto;
+
+      .karta {
+        margin-top: 20px;
+
+        img {
+          width: 250px;
+          height: 260px;
+        }
+
+        .box {
+          margin-top: 20px;
+
+          a {
+            font-size: 18px;
+
+            img {
+              width: 25px;
+              height: auto;
+            }
+
+            div {
+              margin-left: 20px;
+              font-size: 18px;
+              line-height: 20px;
+            }
+          }
+        }
+
+        .maps {
+          border-radius: 14px;
+          width: 250px;
+          height: 200px;
+        }
+
+      }
+
+      .karta:nth-of-type(2) {
+        width: 200px;
+        position: absolute;
+        top: 0;
+        left: 20px;
+      }
+
+      .karta:nth-of-type(3) {
+        width: 300px;
+      }
+    }
+
+    .bottomFooter {
+      width: 100%;
+      height: 60px;
+      margin-top: 50px;
+
+      .text {
+        margin-top: 21px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 1px;
+      }
+
+      a {
+        bottom: 21px;
+        right: 50px;
+
+        img {
+          width: 100px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1275px) and (min-width: 992px) {
+  .footer {
+    width: 100%;
+    height: 521px;
+    box-sizing: border-box;
+    padding-top: 50px;
+
+    .logo {
+      margin: 0 auto;
+      width: 274px;
+      height: 124px;
+    }
+
+    .container-fluid {
+      position: relative;
+      width: 980px;
+      margin: 0 auto;
+
+      .karta {
+        margin-top: 26px;
+
+        img {
+          width: 250px;
+          height: 260px;
+        }
+
+        .box {
+          margin-top: 20px;
+
+          a {
+            font-size: 18px;
+
+            img {
+              width: 25px;
+              height: auto;
+            }
+
+            div {
+              margin-left: 20px;
+              font-size: 18px;
+              line-height: 20px;
+            }
+          }
+        }
+
+        .maps {
+          border-radius: 14px;
+          width: 350px;
+          height: 250px;
+        }
+
+      }
+
+      .karta:nth-of-type(2) {
+        width: 200px;
+        position: absolute;
+        top: 0;
+        left: 20px;
+      }
+
+      .karta:nth-of-type(3) {
+        width: 370px;
+      }
+    }
+
+    .bottomFooter {
+      width: 100%;
+      height: 60px;
+      margin-top: 50px;
+
+      .text {
+        margin-top: 21px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 1px;
+      }
+
+      a {
+        bottom: 21px;
+        right: 50px;
+
+        img {
+          width: 100px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1510px) and (min-width: 1275px) {
+  .footer {
+    width: 100%;
+    height: 611px;
+    padding-top: 50px;
+
+    .logo {
+      margin: 0 auto;
+      width: 274px;
+      height: 124px;
+    }
+
+    .container-fluid {
+      width: 1260px;
+      margin: 0 auto;
+
+      .karta {
+        margin-top: 26px;
+
+        img {
+          width: 300px;
+          height: 310px;
+        }
+
+        .box {
+          margin-top: 20px;
+
+          a {
+            font-size: 24px;
+
+            img {
+              width: 25px;
+              height: auto;
+            }
+
+            div {
+              margin-left: 20px;
+              font-size: 18px;
+              line-height: 20px;
+            }
+          }
+        }
+
+        .maps {
+          border-radius: 14px;
+          width: 350px;
+          height: 250px;
+        }
+
+      }
+
+      .karta:nth-of-type(2) {
+        width: 200px;
+      }
+
+      .karta:nth-of-type(3) {
+        width: 370px;
+      }
+    }
+
+    .bottomFooter {
+      width: 100%;
+      height: 60px;
+      margin-top: 50px;
+
+      .text {
+        margin-top: 21px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 1px;
+      }
+
+      a {
+        bottom: 21px;
+        right: 50px;
+
+        img {
+          width: 150px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1650px) and (min-width: 1510px) {
+  .footer {
+    width: 100%;
+    height: 671px;
+    padding-top: 50px;
+
+    .logo {
+      margin: 0 auto;
+      width: 274px;
+      height: 124px;
+    }
+
+    .container-fluid {
+      width: 1500px;
+      margin: 0 auto;
+
+      .karta {
+        margin-top: 26px;
+
+        img {
+          width: 340px;
+          height: 350px;
+        }
+
+        .box {
+          margin-top: 20px;
+
+          a {
+            font-size: 24px;
+
+            img {
+              width: 25px;
+              height: auto;
+            }
+
+            div {
+              margin-left: 20px;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 38px;
+              color: #FFFFFF;
+            }
+          }
+        }
+
+        .maps {
+          border-radius: 14px;
+          width: 350px;
+          height: 250px;
+        }
+
+      }
+
+      .karta:nth-of-type(2) {
+        width: 300px;
+      }
+
+      .karta:nth-of-type(3) {
+        width: 430px;
+      }
+    }
+
+    .bottomFooter {
+      width: 100%;
+      height: 60px;
+      margin-top: 50px;
+
+      .text {
+        margin-top: 21px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 1px;
+      }
+
+      a {
+        bottom: 21px;
+        right: 50px;
+
+        img {
+          width: 150px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1710px) and (min-width: 1650px) {
+  .footer {
+    width: 100%;
+    height: 671px;
+    padding-top: 50px;
+
+    .logo {
+      margin: 0 auto;
+      width: 274px;
+      height: 124px;
+    }
+
+    .container-fluid {
+      width: 1640px;
+      margin: 0 auto;
+
+      .karta {
+        margin-top: 26px;
+
+        img {
+          width: 340px;
+          height: 350px;
+        }
+
+        .box {
+          margin-top: 20px;
+
+          a {
+            font-size: 24px;
+
+            img {
+              width: 25px;
+              height: auto;
+            }
+
+            div {
+              margin-left: 20px;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 38px;
+              color: #FFFFFF;
+            }
+          }
+        }
+
+        .maps {
+          border-radius: 14px;
+          width: 450px;
+          height: 300px;
+        }
+
+      }
+
+      .karta:nth-of-type(2) {
+        width: 300px;
+      }
+
+      .karta:nth-of-type(3) {
+        width: 430px;
+      }
+    }
+
+    .bottomFooter {
+      width: 100%;
+      height: 60px;
+      margin-top: 50px;
+
+      .text {
+        margin-top: 21px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 1px;
+      }
+
+      a {
+        bottom: 21px;
+        right: 50px;
+
+        img {
+          width: 150px;
+          height: auto;
+        }
+      }
+    }
+  }
 }

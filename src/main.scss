@@ -54,7 +54,7 @@
   .box {
     position: absolute;
     top: 0;
-    z-index: 100;
+    z-index: 2;
     width: 100vw;
     height: 100vh;
 
@@ -65,7 +65,7 @@
       height: 762px;
       background-image: url("./img/line.svg");
       background-repeat: no-repeat;
-      background-size: 100% 99%;
+      background-size: 100% 100%;
 
       .navbar {
         width: 100%;
@@ -73,10 +73,67 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 30px;
 
-        a {
+        .knopka {
+          background: rgba(66, 59, 59, 0.4);
+          border: 1.5px solid #FFFFFF;
+          box-sizing: border-box;
+          backdrop-filter: blur(2px);
+          border-radius: 8px;
+          width: 50px;
+          height: 50px;
+          padding: 3px;
+          margin-top: 20px;
+          overflow: hidden;
+          &:focus {
+            outline: none;
+          }
+
+          label {
+            display: flex;
+            flex-direction: column;
+            width: 40px;
+            cursor: pointer;
+
+            span {
+              background: white;
+              border-radius: 10px;
+              height: 3px;
+              margin: 5px 0;
+              transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            }
+
+            span:nth-of-type(1) {
+              width: 100%;
+            }
+
+            span:nth-of-type(2) {
+              width: 100%;
+            }
+
+            input[type="checkbox"] {
+              display: none;
+            }
+
+            input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+              transform-origin: bottom;
+              transform: rotatez(45deg) translate(4.5px, 4.5px)
+            }
+
+            input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+
+              transform-origin: top;
+              transform: rotatez(-45deg) translate(4.5px, -4.5px)
+            }
+
+          }
+
+        }
+
+        .navbar-brand {
           width: 108px;
-          height: 100%;
+          height: 110px;
 
           img {
             width: 100%;
@@ -84,53 +141,71 @@
           }
         }
 
-        .right {
-          display: flex;
-          a{
-            margin-left: 20px;
-            text-decoration: none;
-            width: 155px;
-            height: 60px;
-            transition: .6s ease;
+        .navbar-collapse {
+          flex-direction: row-reverse;
 
-            &:hover{
-              button{
-                background: #FFFFFF;
-                color: #44484E;
+          .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+
+            .nav-item {
+              width: 155px;
+              height: 50px;
+              margin-left: 20px;
+
+              a {
+                text-decoration: none;
+                width: 100%;
+                height: 100%;
                 transition: .6s ease;
+
+                &:hover {
+                  button {
+                    background: #FFFFFF;
+                    color: #44484E;
+                    transition: .6s ease;
+
+                  }
+                }
+
+                button {
+                  background: rgba(66, 59, 59, 0.4);
+                  border: 1.5px solid #FFFFFF;
+                  box-sizing: border-box;
+                  backdrop-filter: blur(2px);
+                  border-radius: 13.4402px;
+                  width: 100%;
+                  height: 100%;
+                  font-weight: 400;
+                  font-size: 18px;
+                  line-height: 25px;
+                  color: #FFFFFF;
+                }
 
               }
             }
-            button{
-              background: rgba(66, 59, 59, 0.4);
-              border: 1.5px solid #FFFFFF;
-              box-sizing: border-box;
-              backdrop-filter: blur(2px);
-              border-radius: 13.4402px;
-              width: 100%;
-              height: 100%;
-              font-weight: 400;
-              font-size: 18px;
-              line-height: 25px;
-              color: #FFFFFF;
-            }
-
           }
-
         }
+
       }
 
       .libLogo {
         width: 415px;
         height: 188px;
         margin: 40px auto !important;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
 
       .serch {
         position: relative;
         width: 739px;
         height: 58px;
-        margin: 40px auto;
+        margin: 0 auto;
 
         input {
           width: 100%;
@@ -188,12 +263,13 @@
     width: 100vw;
 
     .title {
+      width: 1693px;
       font-style: normal;
       font-weight: 800;
       font-size: 40px;
       line-height: 59px;
       color: #44484E;
-      margin: 60px 0 30px 110px;
+      margin: 60px auto 30px auto;
     }
   }
 
@@ -211,18 +287,21 @@
         box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.08), 4px 4px 20px rgba(0, 0, 0, 0.08);
         border-radius: 30px;
 
-        .boxcha{
+        .boxcha {
           display: flex;
           padding-bottom: 40px;
-          .left{
-            img{
+
+          .left {
+            img {
               width: 309px;
               height: 414px;
             }
           }
-          .right{
-            padding:0 22px 0 63px;
-            .title{
+
+          .right {
+            padding: 0 22px 0 63px;
+
+            .title {
               margin-top: 20px;
               text-align: center;
               font-weight: 700;
@@ -230,7 +309,8 @@
               line-height: 35px;
               color: #44484E;
             }
-            p{
+
+            p {
               height: 146px;
               margin-top: 21px;
               font-weight: 400;
@@ -240,7 +320,8 @@
               color: #44484E;
 
             }
-            img{
+
+            img {
               margin-top: 24px;
               width: 164px;
               height: 164px;
@@ -249,20 +330,23 @@
 
 
         }
-        .downloadFooter{
+
+        .downloadFooter {
           height: 70px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          .left{
-            img{
+
+          .left {
+            img {
               width: 21.74px;
               height: auto;
               margin-right: 10px;
             }
           }
-          .right{
-            button{
+
+          .right {
+            button {
               width: 252px;
               height: 43px;
               background-color: #4470b2;
@@ -270,7 +354,7 @@
               color: #FFFFFF;
               transition: .7s ease;
 
-              &:hover{
+              &:hover {
                 background-color: #FFFFFF;
                 color: #4470b2;
                 border: 1px solid #4470b2;
@@ -299,19 +383,21 @@
         }
       }
 
-      .titleYangi{
+      .titleYangi {
         font-weight: 600;
         font-size: 40px;
         line-height: 130%;
         color: #44484E;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
       }
 
-      .yangilikBox{
-        width:810px;
+      .yangilikBox {
+        margin-top: 30px;
+        width: 810px;
         padding: 0 20px 0 0;
         margin-bottom: 80px;
-        .yangilik{
+
+        .yangilik {
           width: 790px;
           height: 983px;
           border-radius: 25px;
@@ -321,13 +407,13 @@
           padding: 0;
           overflow: hidden;
 
-          .ten{
+          .ten {
             width: 100%;
             height: 100%;
             padding: 30px 50px;
             background: rgba(0, 0, 0, 0.2);
 
-            p:nth-of-type(1){
+            p:nth-of-type(1) {
               font-weight: 700;
               font-size: 40px;
               line-height: 59px;
@@ -335,7 +421,7 @@
               margin-top: 25px;
             }
 
-            p:nth-of-type(2){
+            p:nth-of-type(2) {
               font-weight: 400;
               font-size: 24px;
               line-height: 30px;
@@ -350,17 +436,20 @@
       }
 
 
-
-      .Yangiliklar{
+      .Yangiliklar {
+        margin-top: 30px;
         width: 880px;
-        .right{
+
+        .right {
           width: 440px;
           padding: 0 20px;
-          img{
+
+          img {
             width: 400px;
             height: 300px;
           }
-          p{
+
+          p {
             margin: 30px 0 40px 0;
             font-weight: 500;
             font-size: 24px;
@@ -369,18 +458,19 @@
             height: 56px;
           }
 
-          .boxcha{
+          .boxcha {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin: 4px 0 40px 0;
 
-            .left{
-              img{
+            .left {
+              img {
                 width: 20px;
                 height: auto;
               }
-              span{
+
+              span {
                 margin-left: 18px;
                 font-weight: 300;
                 font-size: 14px;
@@ -388,7 +478,8 @@
                 color: #44484E;
               }
             }
-            button{
+
+            button {
               width: 100px;
               height: 30px;
               background: #4470B2;
@@ -436,35 +527,31 @@
     }
   }
 
-  .galereya{
-    margin: 70px 0 60px 100px;
-    text-align: left;
+  .galereya {
+    width: 1693px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 40px;
-    line-height: 130%;
+    line-height: 59px;
     color: #44484E;
+    margin: 60px auto 30px auto;
   }
 
-  .owl-theme{
+  .owl-theme {
     width: 1708px;
     padding-bottom: 71px;
-    margin: 0 auto;
-    .item{
+    margin: 30px auto;
+
+    .item {
       border-radius: 10px;
       overflow: hidden;
       width: 549px;
       height: 473px;
-      img{
-        width: 549px;
-        height: 473px;
-      }
-    }
 
-    .opened{
-      z-index: 2;
-      transform: rotate(-15deg) scale(1.4);
-      box-shadow: rgba(0, 0, 0, 0.75) 0 0 0 10000px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -549,5 +636,2319 @@
   100% {
     transform: scale(1.08, 1.08);
     z-index: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .main {
+    .CaruselBox {
+      width: 100vw;
+      height: 270px;
+    }
+
+    .box {
+      width: 100vw;
+      height: 270px;
+
+      .line {
+        padding: 10px 0;
+        margin: 0 auto;
+        width: 370px;
+        height: 270px;
+        background: inherit;
+
+        .navbar {
+          align-items: normal;
+          width: 100%;
+          height: 45px;
+
+          .knopka {
+            margin-top: 10px;
+            border-radius: 5px;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+
+            label {
+              width: 25px;
+
+              span {
+                height: 2px;
+                margin: 5px 0;
+              }
+
+              input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+                transform: rotatez(45deg) translate(4px, 4px)
+              }
+
+              input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+                transform: rotatez(-45deg) translate(4px, -4px)
+              }
+            }
+
+          }
+
+          .navbar-brand {
+            width: 38px;
+            height: 48px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .navbar-collapse {
+            width: 310px;
+
+            .navbar-nav {
+              display: flex;
+              flex-direction: row;
+              width: 310px;
+              margin-top: 0;
+              padding: 0;
+
+              .nav-item {
+                width: 65px;
+                height: 20px;
+                margin-left: 0;
+                margin-right: 5px;
+
+                a {
+                  button {
+                    padding: 1px;
+                    border-radius: 5px;
+                    font-size: 8px;
+                    line-height: 8px;
+                  }
+
+                }
+              }
+            }
+          }
+        }
+
+        .libLogo {
+          width: 132px;
+          height: 53px;
+          margin: 30px auto 10px auto !important;
+        }
+
+        .serch {
+          width: 250px;
+          height: 25px !important;
+          margin: 0 auto;
+
+          input {
+            padding: 0 40px 0 20px;
+            border-radius: 8px;
+            letter-spacing: 1.5px;
+            height: 100% !important;
+            font-size: 8px;
+
+            &::placeholder {
+              font-size: 8px;
+            }
+          }
+          button {
+            width: 15px;
+            height: 15px;
+            padding: 0;
+            top: 2px;
+            right: 15px;
+            img {
+              width: 15px;
+              height: 15px;
+            }
+          }
+        }
+
+        .title {
+          width: 370px;
+          margin: 10px auto;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .Kitoblar {
+      .title {
+        width: 345px;
+        font-size: 12px;
+        line-height: 20px;
+        margin: 20px auto;
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+
+      .rowFluid {
+        padding: 0;
+        width: 345px;
+        margin: 0 auto;
+
+        .Kitob_card {
+          margin-top: 20px;
+          width: 100%;
+          height: 256px;
+          padding: 20px 17px 0 17px;
+          border-radius: 12px;
+
+          hr {
+            margin: 10px;
+          }
+
+          .boxcha {
+            padding-bottom: 0;
+
+            .left {
+              img {
+                width: 130px;
+                height: 175px;
+              }
+            }
+
+            .right {
+              padding: 0 12px 0 25px;
+
+              .title {
+                margin-top: 0;
+                font-size: 12px;
+                line-height: 14px;
+              }
+
+              p {
+                height: 70px;
+                margin-top: 10px;
+                font-size: 9px;
+                line-height: 11px;
+              }
+
+              img {
+                margin-top: 0;
+                width: 70px;
+                height: 70px;
+              }
+            }
+          }
+
+          .downloadFooter {
+            height: 20px;
+
+            .left {
+              img {
+                width: 13px;
+                margin-right: 10px;
+              }
+
+              font-size: 8px;
+            }
+
+            .right {
+              button {
+                width: 75px;
+                height: 21px;
+                border-radius: 20px;
+                font-size: 8px;
+                padding: 0;
+              }
+            }
+          }
+        }
+
+        .barchasi {
+          width: 91px;
+          padding: 0;
+          height: 21px;
+          border-radius: 11px;
+          margin: 20px auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          a {
+            font-size: 8px;
+            line-height: 20px;
+          }
+        }
+
+        .titleYangi {
+          font-size: 12px;
+          line-height: 130%;
+          margin-bottom: 10px;
+        }
+
+        .yangilikBox {
+          width: 350px;
+          height: 400px;
+          padding: 0;
+          margin-bottom: 20px;
+          overflow: hidden;
+          border-radius: 20px;
+
+          .yangilik {
+            width: 100%;
+            height: 150%;
+
+            .ten {
+              width: 100%;
+              height: 100%;
+              padding: 20px 40px;
+
+              p:nth-of-type(1) {
+                font-size: 15px;
+                line-height: 25px;
+                margin-top: 35px;
+              }
+
+              p:nth-of-type(2) {
+                font-size: 12px;
+                line-height: 15px;
+                margin-top: 50px;
+                letter-spacing: 0.5px;
+                width: 95%;
+              }
+            }
+
+          }
+        }
+
+        .Yangiliklar {
+          margin-top: 0;
+          width: 350px;
+
+          .right {
+            width: 50%;
+            padding: 0 10px;
+
+            img {
+              width: 100%;
+              height: 120px;
+            }
+
+            p {
+              margin: 12px 0 0 0;
+              font-size: 10px;
+              line-height: 11px;
+              height: 30px;
+            }
+
+            .boxcha {
+              margin: 4px 0 40px 0;
+
+              .left {
+                img {
+                  width: 13px;
+                  height: auto;
+                }
+
+                span {
+                  margin-left: 5px;
+                  font-size: 6px;
+                  line-height: 6px;
+                }
+              }
+
+              button {
+                width: 50px;
+                height: 13px;
+                border-radius: 10px;
+                font-size: 7px;
+                line-height: 8px;
+                padding: 0;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    hr {
+      margin: 8px 0;
+    }
+
+    .parallax {
+      .statistika {
+        width: 100vw;
+        height: 196px;
+        padding-top: 10px;
+
+        .CountUp {
+          margin-top: 20px;
+          font-size: 20px;
+          line-height: 50%;
+        }
+
+        .barcha {
+          margin-top: 0;
+          font-size: 13px;
+          line-height: 100%;
+        }
+      }
+    }
+
+    .galereya {
+      width: 350px;
+      font-size: 12px;
+      line-height: 15px;
+      margin: 30px auto 20px auto;
+    }
+
+    .owl-theme {
+      width: 350px;
+      padding-bottom: 0;
+      margin: 20px auto;
+
+      .item {
+        border-radius: 5px;
+        width: 170px;
+        height: 142px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+  .main {
+    .CaruselBox {
+      width: 100vw;
+      height: 450px;
+    }
+
+    .box {
+      width: 100vw;
+      height: 450px;
+      .line {
+        padding: 10px 0;
+        margin: 10px auto;
+        width: 570px;
+        height: 450px;
+        background: inherit;
+        .navbar {
+          align-items: normal;
+          width: 100%;
+          height: 100px;
+
+          .navbar-brand {
+            width: 88px;
+            height: 90px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .navbar-collapse {
+            .navbar-nav {
+              display: flex;
+              flex-direction: row;
+              margin-top: 10px;
+
+              .nav-item {
+                width: 80px;
+                height: 35px;
+                margin-left: 15px;
+
+                a {
+                  button {
+                    padding: 0;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    line-height: 10px;
+                  }
+
+                }
+              }
+            }
+          }
+        }
+
+        .libLogo {
+          width: 300px;
+          height: 83px;
+          margin: 40px auto 10px auto !important;
+        }
+
+        .serch {
+          width: 450px;
+          height: 35px;
+          margin: 0 auto;
+
+          input {
+            padding: 20px 80px 20px 50px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+
+            &::placeholder {
+              font-size: 14px;
+            }
+          }
+
+          button {
+            top: 2px;
+            right: 20px;
+          }
+        }
+
+        .title {
+          width: 500px;
+          margin: 30px auto;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .Kitoblar {
+      .title {
+        width: 570px;
+        font-size: 25px;
+        line-height: 30px;
+        margin: 30px auto;
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+
+      .rowFluid {
+        padding: 0;
+        width: 570px;
+        margin: 0 auto;
+
+        .Kitob_card {
+          margin-top: 30px;
+          width: 100%;
+          height: 350px;
+          padding: 20px;
+          border-radius: 20px;
+
+          .boxcha {
+            padding-bottom: 5px;
+
+            .left {
+              img {
+                width: 170px;
+                height: 240px;
+              }
+            }
+
+            .right {
+              padding: 0 12px 0 20px;
+
+              .title {
+                margin-top: 0;
+                font-size: 20px;
+                line-height: 25px;
+              }
+
+              p {
+                height: 100px;
+                margin-top: 20px;
+                font-size: 14px;
+                line-height: 19px;
+              }
+
+              img {
+                margin-top: 0;
+                width: 80px;
+                height: 80px;
+              }
+            }
+          }
+
+          .downloadFooter {
+            height: 35px;
+
+            .left {
+              img {
+                width: 20px;
+                margin-right: 10px;
+              }
+
+              font-size: 12px;
+            }
+
+            .right {
+              button {
+                width: 140px;
+                height: 35px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+
+        .barchasi {
+          width: 200px;
+          height: 50px;
+          border-radius: 42px;
+          margin: 40px auto;
+
+          a {
+            font-size: 18px;
+            line-height: 30px;
+          }
+        }
+
+        .titleYangi {
+          font-size: 25px;
+          line-height: 130%;
+          margin-bottom: 20px;
+        }
+
+        .yangilikBox {
+          width: 570px;
+          height: 400px;
+          padding: 0;
+          margin-bottom: 0px;
+          overflow: hidden;
+          border-radius: 20px;
+
+          .yangilik {
+            width: 100%;
+            height: 150%;
+
+            .ten {
+              width: 100%;
+              height: 100%;
+              padding: 20px 40px;
+
+              p:nth-of-type(1) {
+                font-size: 20px;
+                line-height: 30px;
+                margin-top: 35px;
+              }
+
+              p:nth-of-type(2) {
+                font-size: 18px;
+                line-height: 25px;
+                margin-top: 50px;
+                letter-spacing: 0.5px;
+                width: 95%;
+              }
+            }
+
+          }
+        }
+
+        .Yangiliklar {
+          width: 570px;
+
+          .right {
+            width: 50%;
+            padding: 0 10px;
+
+            img {
+              width: 100%;
+              height: 200px;
+            }
+
+            p {
+              margin: 20px 0 0 0;
+              font-size: 16px;
+              line-height: 20px;
+              height: 40px;
+            }
+
+            .boxcha {
+              margin: 4px 0 40px 0;
+
+              .left {
+                img {
+                  width: 20px;
+                  height: auto;
+                }
+
+                span {
+                  margin-left: 12px;
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+              }
+
+              button {
+                width: 100px;
+                height: 30px;
+                border-radius: 27.8902px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    .parallax {
+      .statistika {
+        width: 100vw;
+        height: 280px;
+        padding-top: 20px;
+
+        .CountUp {
+          margin-top: 30px;
+          font-size: 25px;
+          line-height: 50%;
+        }
+
+        .barcha {
+          margin-top: 0;
+          font-size: 20px;
+          line-height: 100%;
+        }
+      }
+    }
+
+    .galereya {
+      width: 570px;
+      font-size: 25px;
+      line-height: 35px;
+      margin: 30px auto;
+    }
+
+    .owl-theme {
+      width: 570px;
+      padding-bottom: 30px;
+      margin: 30px auto;
+
+      .item {
+        border-radius: 10px;
+        width: 280px;
+        height: 280px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) and (min-width: 767px) {
+  .main {
+    .CaruselBox {
+      width: 100vw;
+      height: 450px;
+    }
+
+    .box {
+      width: 100vw;
+      height: 450px;
+
+      .line {
+        padding: 0;
+        margin: 10px auto;
+        width: 760px;
+        height: 450px;
+        background: inherit;
+        .navbar {
+          width: 100%;
+          height: 110px;
+
+          .navbar-brand {
+            width: 88px;
+            height: 90px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .navbar-collapse {
+            .navbar-nav {
+              .nav-item {
+                width: 100px;
+                height: 38px;
+                margin-left: 15px;
+
+                a {
+                  button {
+                    border-radius: 10px;
+                    font-size: 15px;
+                    line-height: 12px;
+                  }
+
+                }
+              }
+            }
+          }
+
+
+        }
+        .libLogo {
+          width: 300px;
+          height: 83px;
+          margin: 0 auto !important;
+        }
+
+        .serch {
+          width: 600px;
+          height: 40px;
+          margin: 20px auto;
+          input {
+            padding: 0 90px 0 50px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+
+            &::placeholder {
+              font-size: 14px;
+            }
+          }
+
+          button {
+            top: 1px;
+            right: 30px;
+          }
+        }
+
+        .title {
+          width: 660px;
+          margin: 40px auto;
+          font-size: 22px;
+        }
+      }
+    }
+
+    .Kitoblar {
+      .title {
+        width: 760px;
+        font-size: 30px;
+        line-height: 40px;
+        margin: 30px auto;
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+
+      .rowFluid {
+        padding: 0;
+        width: 760px;
+        margin: 0 auto;
+
+        .Kitob_card {
+          margin-top: 30px;
+          width: 100%;
+          height: 400px;
+          padding: 30px;
+          border-radius: 20px;
+
+          .boxcha {
+            padding-bottom: 10px;
+
+            .left {
+              img {
+                width: 180px;
+                height: 250px;
+              }
+            }
+
+            .right {
+              padding: 0 12px 0 30px;
+
+              .title {
+                margin-top: 0;
+                font-size: 28px;
+                line-height: 30px;
+              }
+
+              p {
+                height: 120px;
+                margin-top: 20px;
+                font-size: 16px;
+                line-height: 19px;
+              }
+
+              img {
+                margin-top: 0px;
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+
+          }
+
+          .downloadFooter {
+            height: 50px;
+
+            .left {
+              img {
+                width: 21.74px;
+                margin-right: 10px;
+              }
+            }
+
+            .right {
+              button {
+                width: 150px;
+                height: 43px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+
+        .barchasi {
+          width: 300px;
+          height: 60px;
+          border-radius: 42px;
+          margin: 40px auto;
+
+          a {
+            font-size: 24px;
+            line-height: 34px;
+          }
+        }
+
+        .titleYangi {
+          font-size: 30px;
+          line-height: 130%;
+          margin-bottom: 30px;
+        }
+
+        .yangilikBox {
+          width: 760px;
+          height: 600px;
+          padding: 0;
+          margin-bottom: 80px;
+          overflow: hidden;
+          border-radius: 20px;
+
+          .yangilik {
+            width: 100%;
+            height: 150%;
+
+            .ten {
+              width: 100%;
+              height: 600px;
+              padding: 30px 50px;
+
+              p:nth-of-type(1) {
+                font-size: 30px;
+                line-height: 45px;
+                margin-top: 35px;
+              }
+
+              p:nth-of-type(2) {
+                font-size: 24px;
+                line-height: 30px;
+                margin-top: 50px;
+                letter-spacing: 0.5px;
+                width: 95%;
+              }
+            }
+
+          }
+        }
+
+        .Yangiliklar {
+          width: 985px;
+
+          .right {
+            width: 50%;
+            padding: 0 20px;
+
+            img {
+              width: 100%;
+              height: 240px;
+            }
+
+            p {
+              margin: 30px 0 40px 0;
+              font-size: 24px;
+              line-height: 28px;
+              height: 56px;
+            }
+
+            .boxcha {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin: 4px 0 40px 0;
+
+              .left {
+                img {
+                  width: 20px;
+                  height: auto;
+                }
+
+                span {
+                  margin-left: 18px;
+                  font-weight: 300;
+                  font-size: 14px;
+                  line-height: 16px;
+                  color: #44484E;
+                }
+              }
+
+              button {
+                width: 100px;
+                height: 30px;
+                background: #4470B2;
+                border-radius: 27.8902px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #FFFFFF;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    .parallax {
+      .statistika {
+        width: 100vw;
+        height: 366px;
+
+        .CountUp {
+          margin-top: 117px;
+          font-size: 40px;
+          line-height: 130%;
+        }
+
+        .barcha {
+          margin-top: 20px;
+          font-size: 25px;
+          line-height: 130%;
+        }
+      }
+    }
+
+    .galereya {
+      width: 760px;
+      font-size: 30px;
+      line-height: 45px;
+      margin: 30px auto;
+    }
+
+    .owl-theme {
+      width: 750px;
+      padding-bottom: 30px;
+      margin: 30px auto;
+
+      .item {
+        border-radius: 10px;
+        width: 360px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1275px) and (min-width: 992px) {
+  .main {
+    .CaruselBox {
+      width: 100vw;
+      height: 600px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .box {
+      width: 100vw;
+      height: 600px;
+      .line {
+        padding: 0 60px;
+        margin: 10px auto;
+        width: 980px;
+        height: 652px;
+        background: inherit;
+
+        .navbar {
+          width: 100%;
+          height: 110px;
+
+          .navbar-brand {
+            width: 108px;
+            height: 110px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .navbar-collapse {
+            .navbar-nav {
+              .nav-item {
+                width: 125px;
+                height: 45px;
+                margin-left: 18px;
+
+                a {
+                  button {
+                    border-radius: 13.4402px;
+                    font-size: 17px;
+                    line-height: 15px;
+                  }
+
+                }
+              }
+            }
+          }
+
+
+        }
+
+        .libLogo {
+          width: 350px;
+          height: 133px;
+          margin: 10px auto !important;
+        }
+
+        .serch {
+          width: 650px;
+          height: 50px;
+          margin: 0 auto;
+
+          input {
+            width: 100%;
+            height: 100%;
+            padding: 20px 120px 20px 50px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+
+            &::placeholder {
+              font-size: 14px;
+              line-height: 130%;
+
+            }
+          }
+
+          button {
+            position: absolute;
+            top: 5px;
+            right: 40px;
+
+            &:active {
+              outline: none !important;
+            }
+          }
+        }
+
+        .title {
+          width: 903px;
+          margin: 40px auto;
+          font-size: 26px;
+        }
+      }
+    }
+
+    .Kitoblar {
+      .title {
+        width: 985px;
+        font-size: 35px;
+        line-height: 40px;
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+
+      .rowFluid {
+        padding: 0;
+        width: 985px;
+        margin: 0 auto;
+
+        .Kitob_card {
+          margin-top: 30px;
+          width: 470px;
+          height: 400px;
+          padding: 30px;
+          border-radius: 20px;
+
+          .boxcha {
+            padding-bottom: 10px;
+
+            .left {
+              img {
+                width: 180px;
+                height: 250px;
+              }
+            }
+
+            .right {
+              padding: 0 12px 0 30px;
+
+              .title {
+                margin-top: 0;
+                font-size: 28px;
+                line-height: 30px;
+              }
+
+              p {
+                height: 120px;
+                margin-top: 20px;
+                font-size: 15px;
+                line-height: 19px;
+              }
+
+              img {
+                margin-top: 0px;
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+
+          }
+
+          .downloadFooter {
+            height: 50px;
+
+            .left {
+              img {
+                width: 21.74px;
+                margin-right: 10px;
+              }
+            }
+
+            .right {
+              button {
+                width: 150px;
+                height: 43px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+
+        .barchasi {
+          width: 300px;
+          height: 60px;
+          border-radius: 42px;
+          margin: 40px auto;
+
+          a {
+            font-size: 24px;
+            line-height: 34px;
+          }
+        }
+
+        .titleYangi {
+          font-size: 35px;
+          line-height: 130%;
+          margin-bottom: 30px;
+        }
+
+        .yangilikBox {
+          width: 985px;
+          height: 600px;
+          padding: 0;
+          margin-bottom: 80px;
+          overflow: hidden;
+          border-radius: 25px;
+
+          .yangilik {
+            width: 100%;
+            height: 150%;
+
+            .ten {
+              width: 100%;
+              height: 600px;
+              padding: 30px 50px;
+
+              p:nth-of-type(1) {
+                font-size: 30px;
+                line-height: 45px;
+                margin-top: 35px;
+              }
+
+              p:nth-of-type(2) {
+                font-size: 24px;
+                line-height: 30px;
+                margin-top: 50px;
+                letter-spacing: 0.5px;
+                width: 95%;
+              }
+            }
+
+          }
+        }
+
+        .Yangiliklar {
+          width: 985px;
+
+          .right {
+            width: 50%;
+            padding: 0 20px;
+
+            img {
+              width: 100%;
+              height: 240px;
+            }
+
+            p {
+              margin: 30px 0 40px 0;
+              font-size: 24px;
+              line-height: 28px;
+              height: 56px;
+            }
+
+            .boxcha {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin: 4px 0 40px 0;
+
+              .left {
+                img {
+                  width: 20px;
+                  height: auto;
+                }
+
+                span {
+                  margin-left: 18px;
+                  font-weight: 300;
+                  font-size: 14px;
+                  line-height: 16px;
+                  color: #44484E;
+                }
+              }
+
+              button {
+                width: 100px;
+                height: 30px;
+                background: #4470B2;
+                border-radius: 27.8902px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #FFFFFF;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    .parallax {
+      .statistika {
+        width: 100vw;
+        height: 466px;
+
+        .CountUp {
+          margin-top: 117px;
+          font-size: 50px;
+          line-height: 130%;
+        }
+
+        .barcha {
+          margin-top: 37px;
+          font-size: 35px;
+          line-height: 130%;
+        }
+      }
+    }
+
+    .galereya {
+      width: 985px;
+      font-size: 35px;
+      line-height: 45px;
+    }
+
+    .owl-theme {
+      width: 985px;
+      padding-bottom: 30px;
+      margin: 30px auto;
+
+      .item {
+        border-radius: 10px;
+        width: 320px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1510px) and (min-width: 1275px) {
+  .main {
+    .CaruselBox {
+      width: 100vw;
+      height: 100vh;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .box {
+      width: 100vw;
+      height: 100vh;
+      .line {
+        padding: 40px 60px;
+        margin: 10px auto;
+        width: 1200px;
+        height: 652px;
+        .navbar {
+          width: 100%;
+          height: 110px;
+
+          .navbar-brand {
+            width: 108px;
+            height: 110px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .navbar-nav {
+            .nav-item {
+              width: 135px;
+              height: 55px;
+              margin-left: 18px;
+
+              a {
+                button {
+                  border-radius: 13.4402px;
+                  font-size: 18px;
+                  line-height: 25px;
+                }
+
+              }
+            }
+          }
+        }
+
+        .libLogo {
+          width: 370px;
+          height: 153px;
+          margin: 30px auto !important;
+        }
+
+        .serch {
+          width: 739px;
+          height: 58px;
+          margin: 0 auto;
+
+          input {
+            width: 100%;
+            height: 100%;
+            color: white;
+            padding: 20px 120px 20px 50px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+
+            &::placeholder {
+              font-size: 14px;
+              line-height: 130%;
+            }
+          }
+
+          button {
+            top: 10px;
+            right: 50px;
+          }
+        }
+
+        .title {
+          width: 903px;
+          margin: 40px auto;
+          font-size: 28px;
+        }
+      }
+    }
+
+    .Kitoblar {
+      .title {
+        width: 1200px;
+        font-size: 40px;
+        line-height: 59px;
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+
+      .rowFluid {
+        padding: 0;
+        width: 1200px;
+        margin: 0 auto;
+        .Kitob_card {
+          margin-top: 30px;
+          width: 580px;
+          height: 430px;
+          padding: 30px;
+          border-radius: 25px;
+
+          .boxcha {
+            padding-bottom: 10px;
+
+            .left {
+              img {
+                width: 220px;
+                height: 300px;
+              }
+            }
+
+            .right {
+              padding: 0 22px 0 30px;
+
+              .title {
+                margin-top: 20px;
+                font-size: 30px;
+                line-height: 30px;
+              }
+
+              p {
+                height: 120px;
+                margin-top: 20px;
+                font-size: 18px;
+                line-height: 19px;
+              }
+
+              img {
+                margin-top: 0px;
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+
+          }
+
+          .downloadFooter {
+            height: 50px;
+
+            .left {
+              img {
+                width: 21.74px;
+                margin-right: 10px;
+              }
+            }
+
+            .right {
+              button {
+                width: 150px;
+                height: 43px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+
+        .barchasi {
+          width: 300px;
+          height: 60px;
+          background-color: #4470B2;
+          border-radius: 42px;
+          margin: 70px auto;
+
+          a {
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 34px;
+            color: #FFFFFF;
+
+          }
+        }
+
+        .titleYangi {
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 130%;
+          color: #44484E;
+          margin-bottom: 60px;
+        }
+
+        .yangilikBox {
+          width: 600px;
+          padding: 0 20px 0 0;
+          margin-bottom: 80px;
+
+          .yangilik {
+            width: 100%;
+            height: 883px;
+            border-radius: 25px;
+
+            .ten {
+              width: 100%;
+              height: 100%;
+              padding: 30px 50px;
+
+              p:nth-of-type(1) {
+                font-size: 35px;
+                line-height: 45px;
+                color: #FFFFFF;
+                margin-top: 25px;
+              }
+
+              p:nth-of-type(2) {
+                font-size: 24px;
+                line-height: 30px;
+                margin-top: 50px;
+                letter-spacing: 0.5px;
+                width: 95%;
+              }
+            }
+
+          }
+        }
+
+        .Yangiliklar {
+          width: 600px;
+
+          .right {
+            width: 50%;
+            padding: 0 20px;
+
+            img {
+              width: 100%;
+              height: 240px;
+            }
+
+            p {
+              margin: 30px 0 40px 0;
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 28px;
+              color: #44484E;
+              height: 56px;
+            }
+
+            .boxcha {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin: 4px 0 40px 0;
+
+              .left {
+                img {
+                  width: 20px;
+                  height: auto;
+                }
+
+                span {
+                  margin-left: 18px;
+                  font-weight: 300;
+                  font-size: 14px;
+                  line-height: 16px;
+                  color: #44484E;
+                }
+              }
+
+              button {
+                width: 100px;
+                height: 30px;
+                background: #4470B2;
+                border-radius: 27.8902px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #FFFFFF;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    .parallax {
+      .statistika {
+        width: 100vw;
+        height: 466px;
+        background: rgba(0, 0, 0, 0.6);
+
+        .CountUp {
+          text-align: center;
+          margin-top: 117px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 60px;
+          line-height: 130%;
+          color: #FFFFFF;
+
+        }
+
+
+        .barcha {
+          text-align: center;
+          margin-top: 37px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 130%;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    .galereya {
+      width: 1200px;
+      font-size: 40px;
+      line-height: 59px;
+    }
+
+    .owl-theme {
+      width: 1200px;
+      padding-bottom: 30px;
+      margin: 30px auto;
+
+      .item {
+        border-radius: 10px;
+        width: 380px;
+        height: 370px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1650px) and (min-width: 1510px) {
+  .main {
+    .CaruselBox {
+      width: 100vw;
+      height: 100vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .box {
+      width: 100vw;
+      height: 100vh;
+      .line {
+        padding: 40px 60px;
+        margin: 50px auto;
+        width: 1200px;
+        height: 652px;
+        .navbar {
+          width: 100%;
+          height: 110px;
+
+          .navbar-brand {
+            width: 108px;
+            height: 110px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .navbar-nav {
+            .nav-item {
+              width: 135px;
+              height: 35px;
+              margin-left: 18px;
+
+              a {
+                button {
+                  border-radius: 13.4402px;
+                  font-size: 18px;
+                  line-height: 25px;
+                }
+
+              }
+            }
+          }
+        }
+        .libLogo {
+          width: 370px;
+          height: 153px;
+          margin: 30px auto !important;
+        }
+
+        .serch {
+          width: 739px;
+          height: 58px;
+          margin: 0 auto;
+
+          input {
+            padding: 20px 120px 20px 50px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+
+            &::placeholder {
+              font-size: 14px;
+              line-height: 130%;
+            }
+          }
+
+          button {
+            top: 10px;
+            right: 50px;
+          }
+        }
+
+        .title {
+          width: 903px;
+          margin: 40px auto;
+          font-size: 28px;
+        }
+      }
+    }
+
+    .Kitoblar {
+      .title {
+        width: 1400px;
+        font-size: 40px;
+        line-height: 59px;
+      }
+    }
+
+    .container-fluid {
+      .rowFluid {
+        width: 1400px;
+        margin: 0 auto;
+
+        .Kitob_card {
+          margin-top: 30px;
+          width: 680px;
+          height: 530px;
+          padding: 30px;
+          border-radius: 25px;
+
+          .boxcha {
+            padding-bottom: 10px;
+
+            .left {
+              img {
+                width: 300px;
+                height: 400px;
+              }
+            }
+
+            .right {
+              padding: 0 22px 0 30px;
+
+              .title {
+                margin-top: 20px;
+                font-size: 30px;
+                line-height: 30px;
+              }
+
+              p {
+                height: 150px;
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 25px;
+              }
+
+              img {
+                margin-top: 30px;
+                width: 90px;
+                height: 90px;
+              }
+            }
+
+
+          }
+
+          .downloadFooter {
+            height: 50px;
+
+            .left {
+              img {
+                width: 21.74px;
+                margin-right: 10px;
+              }
+            }
+
+            .right {
+              button {
+                width: 180px;
+                height: 43px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+
+        .barchasi {
+          width: 300px;
+          height: 60px;
+          border-radius: 42px;
+          margin: 60px auto;
+
+          a {
+            font-size: 24px;
+            line-height: 34px;
+          }
+        }
+
+        .titleYangi {
+          font-size: 40px;
+          line-height: 130%;
+          margin-bottom: 50px;
+        }
+
+        .yangilikBox {
+          width: 650px;
+          padding: 0 20px 0 0;
+          margin-bottom: 80px;
+
+          .yangilik {
+            width: 100%;
+            height: 850px;
+            border-radius: 25px;
+
+            .ten {
+              padding: 30px 50px;
+
+              p:nth-of-type(1) {
+                font-size: 30px;
+                line-height: 35px;
+                margin-top: 25px;
+              }
+
+              p:nth-of-type(2) {
+                font-size: 24px;
+                line-height: 30px;
+                color: #FFFFFF;
+                margin-top: 50px;
+                letter-spacing: 0.5px;
+                width: 95%;
+              }
+            }
+
+          }
+        }
+
+        .Yangiliklar {
+          width: 750px;
+
+          .right {
+            width: 50%;
+            padding: 0 20px;
+
+            img {
+              width: 100%;
+              height: 250px;
+            }
+
+            p {
+              margin: 20px 0 30px 0;
+              font-size: 20px;
+              line-height: 25px;
+              height: 56px;
+            }
+
+            .boxcha {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin: 4px 0 40px 0;
+
+              .left {
+                img {
+                  width: 20px;
+                  height: auto;
+                }
+
+                span {
+                  margin-left: 18px;
+                  font-weight: 300;
+                  font-size: 14px;
+                  line-height: 16px;
+                  color: #44484E;
+                }
+              }
+
+              button {
+                width: 100px;
+                height: 30px;
+                background: #4470B2;
+                border-radius: 27.8902px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #FFFFFF;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    .parallax {
+      .statistika {
+        width: 100vw;
+        height: 466px;
+        background: rgba(0, 0, 0, 0.6);
+
+        .CountUp {
+          text-align: center;
+          margin-top: 117px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 60px;
+          line-height: 130%;
+          color: #FFFFFF;
+
+        }
+
+
+        .barcha {
+          text-align: center;
+          margin-top: 37px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 130%;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    .galereya {
+      width: 1400px;
+      font-size: 40px;
+      line-height: 59px;
+    }
+
+    .owl-theme {
+      width: 1400px;
+      padding-bottom: 30px;
+      margin: 30px auto;
+
+      .item {
+        border-radius: 10px;
+        width: 440px;
+        height: 430px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1710px) and (min-width: 1650px) {
+  .main {
+    .CaruselBox {
+      width: 100vw;
+      height: 100vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .box {
+      width: 100vw;
+      height: 100vh;
+      .line {
+        padding: 40px 60px;
+        margin: 50px auto;
+        width: 1200px;
+        height: 652px;
+        .navbar {
+          width: 100%;
+          height: 110px;
+          .navbar-brand {
+            width: 108px;
+            height: 110px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .navbar-nav {
+            .nav-item {
+              width: 135px;
+              height: 35px;
+              margin-left: 18px;
+
+              a {
+                button {
+                  border-radius: 13.4402px;
+                  font-size: 18px;
+                  line-height: 25px;
+                }
+
+              }
+            }
+          }
+        }
+
+        .libLogo {
+          width: 370px;
+          height: 153px;
+          margin: 30px auto !important;
+        }
+
+        .serch {
+          width: 739px;
+          height: 58px;
+          margin: 0 auto;
+
+          input {
+            &::placeholder {
+              font-size: 14px;
+            }
+          }
+
+          button {
+            top: 10px;
+            right: 50px;
+          }
+        }
+
+        .title {
+          width: 903px;
+          margin: 40px auto;
+          font-size: 28px;
+        }
+      }
+    }
+
+    .Kitoblar {
+      .title {
+        font-size: 40px;
+        line-height: 59px;
+        padding-left: 100px;
+      }
+    }
+
+    .container-fluid {
+      .rowFluid {
+        width: 1510px;
+        margin: 0 auto;
+        .Kitob_card {
+          margin-top: 30px;
+          width: 720px;
+          height: 546px;
+          padding: 40px;
+          border-radius: 30px;
+
+          .boxcha {
+            padding-bottom: 20px;
+
+            .left {
+              img {
+                width: 259px;
+                height: 364px;
+              }
+            }
+
+            .right {
+              padding: 0 22px 0 43px;
+
+              .title {
+                margin-top: 20px;
+                font-size: 30px;
+                line-height: 35px;
+              }
+
+              p {
+                height: 120px;
+                margin-top: 21px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 23px;
+                justify-content: center;
+                color: #44484E;
+
+              }
+
+              img {
+                margin-top: 24px;
+                width: 104px;
+                height: 104px;
+              }
+            }
+
+
+          }
+
+          .downloadFooter {
+            height: 70px;
+
+            .left {
+              img {
+                width: 21.74px;
+                margin-right: 10px;
+              }
+            }
+
+            .right {
+              button {
+                width: 252px;
+                height: 43px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+
+        .barchasi {
+          width: 300px;
+          height: 60px;
+          border-radius: 42px;
+          margin: 70px auto;
+
+          a {
+            font-size: 24px;
+            line-height: 34px;
+
+          }
+        }
+
+        .titleYangi {
+          padding: 0;
+          font-size: 40px;
+          line-height: 130%;
+          margin-bottom: 60px;
+        }
+
+        .yangilikBox {
+          width: 755px;
+          padding: 0 20px 0 0;
+          margin-bottom: 80px;
+
+          .yangilik {
+            width: 98%;
+            height: 990px;
+            border-radius: 25px;
+
+            .ten {
+              p:nth-of-type(1) {
+                font-size: 40px;
+                line-height: 59px;
+                margin-top: 25px;
+              }
+
+              p:nth-of-type(2) {
+                font-size: 24px;
+                line-height: 30px;
+                margin-top: 50px;
+                letter-spacing: 0.5px;
+                width: 556px;
+              }
+            }
+
+          }
+        }
+
+        .Yangiliklar {
+          width: 755px;
+
+          .right {
+            width: 377px;
+            padding: 0 15px;
+
+            img {
+              width: 340px;
+              height: 300px;
+            }
+
+            p {
+              margin: 30px 0 40px 0;
+              font-size: 24px;
+              line-height: 28px;
+              height: 56px;
+            }
+
+            .boxcha {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin: 4px 0 40px 0;
+
+              .left {
+                img {
+                  width: 20px;
+                  height: auto;
+                }
+
+                span {
+                  margin-left: 18px;
+                  font-weight: 300;
+                  font-size: 14px;
+                  line-height: 16px;
+                  color: #44484E;
+                }
+              }
+
+              button {
+                width: 100px;
+                height: 30px;
+                background: #4470B2;
+                border-radius: 27.8902px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #FFFFFF;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    .parallax {
+      .statistika {
+        width: 100vw;
+        height: 466px;
+        background: rgba(0, 0, 0, 0.6);
+
+        .CountUp {
+          text-align: center;
+          margin-top: 117px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 60px;
+          line-height: 130%;
+          color: #FFFFFF;
+
+        }
+
+
+        .barcha {
+          text-align: center;
+          margin-top: 37px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 130%;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    .galereya {
+      margin: 70px 0 60px 100px;
+      text-align: left;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 130%;
+      color: #44484E;
+    }
+
+    .owl-theme {
+      width: 1510px;
+      padding-bottom: 30px;
+      margin: 30px auto;
+
+      .item {
+        border-radius: 10px;
+        width: 470px;
+        height: 450px;
+      }
+    }
+
   }
 }

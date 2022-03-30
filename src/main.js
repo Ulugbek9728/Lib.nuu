@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {Parallax} from 'react-parallax';
 import CountUp from 'react-countup';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.min.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css'
@@ -12,35 +13,63 @@ import Footer from "./components/footer";
 
 
 function Main(props) {
+    useEffect(() => {
+        AOS.init()
+    });
+
     return (
         <>
             <div className="main">
                 <div className="CaruselBox">
-                    <img src="img/1.jpg" alt=""/>
-                    <img src="img/2.jpg" alt=""/>
-                    <img src="img/3.jpg" alt=""/>
+                    <img src="img/1.png" alt=""/>
+                    <img src="img/2.png" alt=""/>
+                    <img src="img/3.png" alt=""/>
 
                 </div>
                 <div className="box">
                     <div className="line">
-                        <div className="navbar">
-                            <a href="https://nuu.uz/" target="_blank">
+                        <nav className="navbar navbar-expand-md">
+                            <a href="https://nuu.uz/" className="navbar-brand" target="_blank">
                                 <img src="./img/logo_Milliy.svg" alt=""/>
                             </a>
-                            <div className="right">
-                                <Link to="/Kitoblar">
-                                    <button className='btn'>Kitoblar</button>
-                                </Link>
-                                <Link to="/Yangiliklar">
-                                    <button className='btn'>Yangiliklar</button>
-                                </Link>
-
-                                <Link to="#">
-                                    <button className='btn'>Uzb</button>
-                                </Link>
-
+                            <button type="button" className="navbar-toggler knopka" data-bs-toggle="collapse"
+                                    data-bs-target="#myCollapse">
+                                <label htmlFor="check">
+                                    <input type="checkbox" id="check"/>
+                                    <span></span>
+                                    <span></span>
+                                </label>
+                            </button>
+                            <div className="collapse navbar-collapse" id="myCollapse">
+                                <ul className="navbar-nav">
+                                    <li className="nav-item">
+                                        <Link to="/Kitoblar">
+                                            <button className='btn'>Kitoblar</button>
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link to="#" target='_blank'>
+                                            <button className='btn'>Kitob buyurtma</button>
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link to="/Yangiliklar">
+                                            <button className='btn'>Yangiliklar</button>
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link to="#">
+                                            <button className='btn'>Uzb</button>
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link to="/Admin">
+                                            <button className='btn'>Kirish</button>
+                                        </Link>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
+                        </nav>
                         <div className="libLogo">
                             <img src="./img/logo_lib.svg" alt=""/>
                         </div>
@@ -58,14 +87,20 @@ function Main(props) {
                     </div>
                 </div>
                 <div className="Kitoblar">
-                    <div className="title" align={"left"}>
+                    <div className="title"
+                         data-aos="fade-right"
+                         data-aos-duration="1200"
+                         data-aos-easing="ease-in-sine">
                         Eng ko’p qidirilgan kitoblar
                     </div>
                     <hr/>
                 </div>
                 <div className="container-fluid">
                     <div className="row rowFluid">
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                         data-aos="fade-right"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -92,7 +127,10 @@ function Main(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                         data-aos="fade-left"
+                         data-aos-duration="1200"
+                         data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -118,7 +156,10 @@ function Main(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                         data-aos="fade-right"
+                         data-aos-duration="1200"
+                         data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -145,7 +186,10 @@ function Main(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                         data-aos="fade-left"
+                         data-aos-duration="1200"
+                         data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -171,7 +215,10 @@ function Main(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                         data-aos="fade-right"
+                         data-aos-duration="1200"
+                         data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -198,7 +245,10 @@ function Main(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                         data-aos="fade-left"
+                         data-aos-duration="1200"
+                         data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -229,7 +279,12 @@ function Main(props) {
                         </button>
 
                         <div className="titleYangi">Yangiliklar</div>
-                        <div className="col-6 yangilikBox">
+                    </div>
+                </div>
+                <hr/>
+                <div className="container-fluid">
+                    <div className="row rowFluid">
+                        <div className="col-xl-6 col-12 yangilikBox">
                             <div className="yangilik">
                                 <div className="ten">
                                     <p>Meet the family keeping
@@ -242,10 +297,8 @@ function Main(props) {
                                     </p>
                                 </div>
                             </div>
-
-
                         </div>
-                        <div className="col-6 Yangiliklar">
+                        <div className="col-xl-6 col-12 Yangiliklar">
                             <div className="row">
                                 <div className="col-6 right">
                                     <img src="./img/women.png" alt=""/>
@@ -312,7 +365,7 @@ function Main(props) {
                     <div className="statistika">
                         <div className="container">
                             <div className="row">
-                                <div className="col-3">
+                                <div className="col-md-3 col-6">
                                     <CountUp
                                         start={0}
                                         end={695}
@@ -326,7 +379,7 @@ function Main(props) {
                                     </CountUp>
                                     <p className="barcha">Umumiy kitobxonlar soni</p>
                                 </div>
-                                <div className="col-3">
+                                <div className="col-md-3 col-6">
                                     <CountUp
                                         start={0}
                                         end={753}
@@ -341,7 +394,7 @@ function Main(props) {
                                     </CountUp>
                                     <p className="barcha">Axborat-resurs markazi fondi</p>
                                 </div>
-                                <div className="col-3">
+                                <div className="col-md-3 col-6">
                                     <CountUp
                                         start={0}
                                         end={813}
@@ -356,7 +409,7 @@ function Main(props) {
                                     </CountUp>
                                     <p className="barcha">Elektron resurslar soni</p>
                                 </div>
-                                <div className="col-3">
+                                <div className="col-md-3 col-6">
                                     <CountUp
                                         start={0}
                                         end={561}
@@ -376,8 +429,8 @@ function Main(props) {
                         <div className="numberStatic"></div>
                     </div>
                 </Parallax>
-
                 <div className="galereya">Foto Galereya</div>
+                <hr/>
 
                 <OwlCarousel
                     className="owl-theme"
@@ -387,7 +440,11 @@ function Main(props) {
                     nav={false}
                     loop={true}
                     dots={false}
-                >
+                    responsive={
+                        {0:{items:2},
+                        992:{items:2},
+                        1000:{items:3}}
+                    }>
                     <div className="item">
                         <img src="./img/galerey1.png" alt=""/>
                     </div>
@@ -410,6 +467,7 @@ function Main(props) {
                 </OwlCarousel>
 
             </div>
+
             <Footer/>
         </>
 

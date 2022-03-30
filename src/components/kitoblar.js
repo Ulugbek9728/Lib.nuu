@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import ReactPaginate from 'react-paginate';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Footer from "./footer";
 import './kitoblar.scss'
 
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-function Items({ currentItems }) {
+function Items({currentItems}) {
     return (
         <>
             {currentItems &&
@@ -19,7 +22,7 @@ function Items({ currentItems }) {
     );
 }
 
-function PaginatedItems({ itemsPerPage }) {
+function PaginatedItems({itemsPerPage}) {
     // We start with an empty list of items.
     const [currentItems, setCurrentItems] = useState(null);
     const [pageCount, setPageCount] = useState(0);
@@ -46,7 +49,7 @@ function PaginatedItems({ itemsPerPage }) {
 
     return (
         <>
-            <Items currentItems={currentItems} />
+            <Items currentItems={currentItems}/>
             <ReactPaginate
                 breakLabel="..."
                 nextLabel="next >"
@@ -61,6 +64,10 @@ function PaginatedItems({ itemsPerPage }) {
 }
 
 function Kitoblar(props) {
+
+    useEffect(() => {
+        AOS.init()
+    });
     return (
         <>
             <div className='kitoblar-box'>
@@ -85,16 +92,20 @@ function Kitoblar(props) {
                     </div>
                 </div>
 
-                <div className="katalig">
+                <div className="katalig"
+                     data-aos="fade-right"
+                     data-aos-duration="1200"
+                     data-aos-easing="ease-in-sine">
                     <button data-bs-toggle="collapse" data-bs-target="#demo">
                         <label htmlFor="check">
                             <input type="checkbox" id="check"/>
                             <span></span>
                             <span></span>
                             <span></span>
+
                         </label>
-                        <p>Katalog bo’yicha qidirish</p>
                     </button>
+                    <p>Katalog bo’yicha qidirish</p>
                 </div>
                 <div className="kataliglar">
                     <div id="demo" className="collapse">
@@ -120,7 +131,10 @@ function Kitoblar(props) {
 
                 <div className="container-fluid">
                     <div className="row rowFluid">
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                             data-aos="fade-right"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -147,7 +161,10 @@ function Kitoblar(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                             data-aos="fade-left"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -173,7 +190,10 @@ function Kitoblar(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                             data-aos="fade-right"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -200,7 +220,10 @@ function Kitoblar(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                             data-aos="fade-left"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -226,7 +249,10 @@ function Kitoblar(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                             data-aos="fade-right"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -253,7 +279,10 @@ function Kitoblar(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"
+                             data-aos="fade-left"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -279,7 +308,7 @@ function Kitoblar(props) {
                                 </div>
                             </div>
                         </div>
-                        <PaginatedItems itemsPerPage={3} />
+                        <PaginatedItems itemsPerPage={3}/>
                     </div>
                 </div>
 

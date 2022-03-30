@@ -49,7 +49,6 @@
       }
     }
   }
-
   .title{
     font-weight: 800;
     font-size: 40px;
@@ -163,7 +162,6 @@
       }
     }
   }
-
   .galereya{
     margin: 70px 0 60px 100px;
     text-align: left;
@@ -173,7 +171,6 @@
     line-height: 130%;
     color: #44484E;
   }
-
   .owl-theme{
     width: 1708px;
     padding-bottom: 71px;
@@ -195,5 +192,11 @@
       box-shadow: rgba(0, 0, 0, 0.75) 0 0 0 10000px;
     }
   }
-
 }
+@media (max-width: 576px) {}
+@media (max-width: 767px) and (min-width: 576px) {}
+@media (max-width: 992px) and (min-width: 767px) {}
+@media (max-width: 1275px) and (min-width: 992px) {}
+@media (max-width: 1510px) and (min-width: 1275px) {}
+@media (max-width: 1650px) and (min-width: 1510px) {}
+@media (max-width: 1710px) and (min-width: 1650px) {}

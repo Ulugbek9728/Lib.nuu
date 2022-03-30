@@ -8,6 +8,7 @@
 }
 .kitoblar-box{
   width: 100%;
+  overflow: hidden;
   background-color: #fafafa;
   .kitoblar{
     position: relative;
@@ -15,7 +16,7 @@
     height: 100vh;
     background-image: url("../img/javon.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     box-sizing: border-box;
     padding-top: 100px;
 
@@ -39,6 +40,10 @@
         width: 415px;
         height: 188px;
         margin: 40px auto !important;
+        img{
+          width: 100%;
+          height: 100%;
+        }
       }
 
       .text{
@@ -101,6 +106,8 @@
     width: 100%;
     height: 171px;
     padding: 0 125px;
+    display: flex;
+    align-items: center;
     button{
       background-color: inherit;
       border: none;
@@ -118,43 +125,34 @@
           height:5px;
           margin: 7px 0;
           transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
-
         }
-
 
         span:nth-of-type(1){
           width:50%;
-
         }
-
         span:nth-of-type(2){
           width:100%;
         }
-
 
         span:nth-of-type(3){
           width:77%;
 
         }
 
-
         input[type="checkbox"]{
           display:none;
         }
-
 
         input[type="checkbox"]:checked ~ span:nth-of-type(1){
           transform-origin:bottom;
           transform:rotatez(45deg) translate(8px,0px)
         }
 
-
         input[type="checkbox"]:checked ~ span:nth-of-type(2){
 
           transform-origin:top;
           transform:rotatez(-45deg)
         }
-
 
         input[type="checkbox"]:checked ~ span:nth-of-type(3){
 
@@ -165,19 +163,21 @@
         }
 
       }
-    }
 
+    }
     p{
-      margin-left: 50px;
+
+      margin: 0 0 0 50px;
       font-weight: 800;
       font-size: 40px;
-      line-height: 40px;
       color: #44484E;
     }
+
 
   }
 
   .kataliglar{
+    overflow: hidden;
     width: 1670px;
     margin: 0 auto 40px auto ;
     button{
@@ -356,4 +356,1537 @@
 
   }
 
+}
+@media (max-width: 576px) {
+  .kitoblar-box{
+    width: 100%;
+    .kitoblar{
+      overflow: hidden;
+      width: 100%;
+      height: 270px;
+      padding-top: 0;
+      .line {
+        padding: 15px 20px;
+        margin: 0 auto;
+        width: 100%;
+        height: 270px;
+        background: inherit;
+        .asosiyLink{
+          font-size: 12px;
+          line-height: 20px;
+        }
+        .libLogo {
+          width: 132px;
+          height: 53px;
+          margin: 10px auto !important;
+
+        }
+        .text{
+          margin: 10px auto 27px auto;
+          width: 360px;
+          font-size: 12px;
+        }
+        .serch {
+          width: 250px;
+          height: 25px;
+          margin: 10px auto;
+          input {
+            padding: 0 40px 0 20px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+            font-size: 8px;
+            &::placeholder {
+              font-size: 8px;
+            }
+          }
+          button {
+            padding: 0;
+            top: 0px;
+            right: 15px;
+            img{
+              width: 15px;
+              height: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .katalig{
+      width: 100%;
+      height: 50px;
+      padding: 0 20px;
+      button{
+        label{
+          width:20px;
+          height: 20px;
+          margin-top: 8px;
+          span{
+            border-radius:5px;
+            height: 1.5px;
+            margin: 3px 0;
+          }
+          span:nth-of-type(1){
+            width:100%;
+          }
+          span:nth-of-type(2){
+            width:100%;
+          }
+          span:nth-of-type(3){
+            display: none;
+          }
+
+          input[type="checkbox"]{
+            display:none;
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+            transform-origin: bottom;
+            transform: rotatez(45deg) translate(1px, 4px)
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+
+            transform-origin: top;
+            transform: rotatez(-45deg) translate(1px, -4px)
+          }
+        }
+
+      }
+      p{
+        margin: 0 0 0 25px;
+        font-size: 12px;
+      }
+    }
+    hr{
+      margin: 0;
+    }
+
+    .kataliglar{
+      width: 360px;
+      margin: 0 auto ;
+      button{
+        width: 84px;
+        height: 20px;
+        font-size: 8px;
+        line-height: 0px;
+        margin: 0 5px 5px 0;
+        border-radius: 10px;
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+
+      .rowFluid {
+        padding: 0;
+        width: 345px;
+        margin: 0 auto;
+
+        .Kitob_card {
+          margin-top: 20px;
+          width: 100%;
+          height: 256px;
+          padding: 20px 17px 0 17px;
+          border-radius: 12px;
+
+          hr {
+            margin: 10px;
+          }
+
+          .boxcha {
+            padding-bottom: 0;
+
+            .left {
+              img {
+                width: 130px;
+                height: 175px;
+              }
+            }
+
+            .right {
+              padding: 0 12px 0 25px;
+
+              .title {
+                margin-top: 0;
+                font-size: 12px;
+                line-height: 14px;
+              }
+
+              p {
+                height: 70px;
+                margin-top: 10px;
+                font-size: 9px;
+                line-height: 11px;
+              }
+
+              img {
+                margin-top: 0;
+                width: 70px;
+                height: 70px;
+              }
+            }
+          }
+
+          .downloadFooter {
+            height: 20px;
+
+            .left {
+              img {
+                width: 13px;
+                margin-right: 10px;
+              }
+
+              font-size: 8px;
+            }
+
+            .right {
+              button {
+                width: 75px;
+                height: 21px;
+                border-radius: 20px;
+                font-size: 8px;
+                padding: 0;
+              }
+            }
+          }
+        }
+
+        ul{
+          .previous{
+            width: 80px;
+            height: 25px;
+            border-radius: 42px;
+            a{
+              font-size: 10px;
+              letter-spacing: .5px;
+            }
+          }
+          .next{
+            width: 80px;
+            height: 25px;
+            border-radius: 42px;
+            a{
+              font-size: 10px;
+              letter-spacing: .5px;
+            }
+          }
+
+          .selected{
+            border-bottom: 2px solid #4470B2;
+            a{
+              font-size: 15px;
+            }
+          }
+          li{
+            width: 35px;
+            height: 100%;
+            a{
+              font-size: 10px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+  .kitoblar-box{
+    width: 100%;
+    .kitoblar{
+      overflow: hidden;
+      width: 100%;
+      height: 450px;
+      padding-top: 0;
+      .line {
+        padding: 30px 60px;
+        margin: 0 auto;
+        width: 100%;
+        height: 450px;
+        background: inherit;
+        .asosiyLink{
+          font-size: 15px;
+          line-height: 20px;
+        }
+        .libLogo {
+          width: 300px;
+          height: 83px;
+          margin: 30px auto !important;
+
+        }
+        .text{
+          margin: 40px auto 27px auto;
+          width: 500px;
+          font-size: 18px;
+        }
+        .serch {
+          width: 450px;
+          height: 35px;
+          margin: 10px auto;
+          input {
+            padding: 0 70px 0 40px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+            &::placeholder {
+              font-size: 14px;
+              line-height: 130%;
+            }
+          }
+          button {
+            top: -1px;
+            right: 15px;
+            img{
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .katalig{
+      width: 100%;
+      height: 100px;
+      padding: 0 20px;
+      button{
+        label{
+          width:45px;
+          span{
+            border-radius:10px;
+            height: 4px;
+            margin: 6px 0;
+          }
+          span:nth-of-type(1){
+            width:100%;
+          }
+          span:nth-of-type(2){
+            width:100%;
+          }
+
+          span:nth-of-type(3){
+            display: none;
+          }
+
+          input[type="checkbox"]{
+            display:none;
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+            transform-origin: bottom;
+            transform: rotatez(45deg) translate(5px, 5px)
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+
+            transform-origin: top;
+            transform: rotatez(-45deg) translate(5px, -5px)
+          }
+        }
+
+      }
+      p{
+        margin: 0 0 0 25px;
+        font-size: 25px;
+      }
+    }
+
+    .kataliglar{
+      width: 560px;
+      margin: 0 auto ;
+      button{
+        width: 125px;
+        height: 40px;
+        font-size: 15px;
+        line-height: 28px;
+        margin: 0 10px 10px 0;
+        border-radius: 10px;
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+      .rowFluid {
+        padding: 0;
+        width: 570px;
+        margin: 0 auto;
+
+        .Kitob_card {
+          margin-top: 30px;
+          width: 100%;
+          height: 350px;
+          padding: 20px;
+          border-radius: 20px;
+
+          .boxcha {
+            padding-bottom: 5px;
+
+            .left {
+              img {
+                width: 170px;
+                height: 240px;
+              }
+            }
+
+            .right {
+              padding: 0 12px 0 20px;
+
+              .title {
+                margin-top: 0;
+                font-size: 20px;
+                line-height: 25px;
+              }
+
+              p {
+                height: 100px;
+                margin-top: 20px;
+                font-size: 14px;
+                line-height: 19px;
+              }
+
+              img {
+                margin-top: 0;
+                width: 80px;
+                height: 80px;
+              }
+            }
+          }
+
+          .downloadFooter {
+            height: 35px;
+
+            .left {
+              img {
+                width: 20px;
+                margin-right: 10px;
+              }
+
+              font-size: 12px;
+            }
+
+            .right {
+              button {
+                width: 140px;
+                height: 35px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+
+        ul{
+          .previous{
+            width: 100px;
+            height: 35px;
+            border-radius: 42px;
+            a{
+              font-weight: 700;
+              font-size: 14px;
+              letter-spacing: .5px;
+            }
+          }
+          .next{
+            width: 100px;
+            height: 35px;
+            border-radius: 42px;
+            a{
+              font-size: 14px;
+              letter-spacing: .5px;
+            }
+          }
+
+          .selected{
+            border-bottom: 2px solid #4470B2;
+            a{
+              font-size: 15px;
+            }
+          }
+          li{
+            width: 35px;
+            height: 80%;
+            a{
+              font-size: 12px;
+              line-height: 59px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+@media (max-width: 992px) and (min-width: 767px) {
+  .kitoblar-box{
+    width: 100%;
+    .kitoblar{
+      overflow: hidden;
+      width: 100%;
+      height: 450px;
+      padding-top: 0;
+      .line {
+        padding: 30px 60px;
+        margin: 0 auto;
+        width: 100%;
+        height: 450px;
+        background: inherit;
+        .asosiyLink{
+          font-size: 17px;
+          line-height: 25px;
+        }
+        .libLogo {
+          width: 300px;
+          height: 83px;
+          margin: 10px auto !important;
+
+        }
+        .text{
+          margin: 40px auto 27px auto;
+          width: 650px;
+          font-size: 22px;
+        }
+        .serch {
+          width: 600px;
+          height: 40px;
+          margin: 10px auto;
+          input {
+            padding: 0 90px 0 50px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+            &::placeholder {
+              font-size: 14px;
+              line-height: 130%;
+            }
+          }
+          button {
+            top: 1px;
+            right: 30px;
+
+          }
+        }
+      }
+    }
+
+    .katalig{
+      width: 100%;
+      height: 100px;
+      padding: 0 20px;
+      button{
+        label{
+          width:45px;
+          span{
+            border-radius:10px;
+            height: 4px;
+            margin: 6px 0;
+          }
+          span:nth-of-type(1){
+            width:100%;
+          }
+          span:nth-of-type(2){
+            width:100%;
+          }
+
+          span:nth-of-type(3){
+            display: none;
+          }
+
+          input[type="checkbox"]{
+            display:none;
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+            transform-origin: bottom;
+            transform: rotatez(45deg) translate(5px, 5.5px)
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+
+            transform-origin: top;
+            transform: rotatez(-45deg) translate(5.5px, -5px)
+          }
+        }
+
+      }
+      p{
+        margin: 0 0 0 25px;
+        font-size: 30px;
+      }
+    }
+
+    .kataliglar{
+      width: 760px;
+      margin: 0 auto ;
+      button{
+        width: 125px;
+        height: 40px;
+        font-size: 15px;
+        line-height: 28px;
+        margin: 0 10px 10px 0;
+        border-radius: 10px;
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+
+      .rowFluid {
+        padding: 0;
+        width: 760px;
+        margin: 0 auto;
+
+        .Kitob_card {
+          margin-top: 30px;
+          width: 100%;
+          height: 400px;
+          padding: 30px;
+          border-radius: 20px;
+
+          .boxcha {
+            padding-bottom: 10px;
+
+            .left {
+              img {
+                width: 180px;
+                height: 250px;
+              }
+            }
+
+            .right {
+              padding: 0 12px 0 30px;
+
+              .title {
+                margin-top: 0;
+                font-size: 28px;
+                line-height: 30px;
+              }
+
+              p {
+                height: 120px;
+                margin-top: 20px;
+                font-size: 16px;
+                line-height: 19px;
+              }
+
+              img {
+                margin-top: 0px;
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+
+          }
+
+          .downloadFooter {
+            height: 50px;
+
+            .left {
+              img {
+                width: 21.74px;
+                margin-right: 10px;
+              }
+            }
+
+            .right {
+              button {
+                width: 150px;
+                height: 43px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+
+        ul{
+          .previous{
+            width: 100px;
+            height: 35px;
+            border-radius: 42px;
+            a{
+              font-weight: 700;
+              font-size: 14px;
+              letter-spacing: .5px;
+            }
+          }
+          .next{
+            width: 100px;
+            height: 35px;
+            border-radius: 42px;
+            a{
+              font-size: 14px;
+              letter-spacing: .5px;
+            }
+          }
+
+          .selected{
+            border-bottom: 2px solid #4470B2;
+            a{
+              font-size: 15px;
+            }
+          }
+          li{
+            width: 35px;
+            height: 80%;
+            a{
+              font-size: 12px;
+              line-height: 59px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+@media (max-width: 1275px) and (min-width: 992px) {
+  .kitoblar-box{
+    width: 100%;
+    .kitoblar{
+      overflow: hidden;
+      width: 100%;
+      height: 600px;
+      padding-top: 0;
+      .line {
+        padding: 30px 60px;
+        margin: 0 auto;
+        width: 100%;
+        height: 652px;
+        background: inherit;
+        .asosiyLink{
+          font-size: 18px;
+          line-height: 25px;
+        }
+        .libLogo {
+          width: 350px;
+          height: 133px;
+          margin: 10px auto !important;
+
+        }
+        .text{
+          margin: 40px auto 27px auto;
+          width: 903px;
+          font-size: 26px;
+        }
+        .serch {
+          width: 650px;
+          height: 50px;
+          margin: 10px auto;
+          input {
+            padding: 0 100px 0 50px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+            &::placeholder {
+              font-size: 14px;
+              line-height: 130%;
+            }
+          }
+
+          button {
+            top: 5px;
+            right: 40px;
+
+          }
+        }
+      }
+    }
+
+    .katalig{
+      width: 100%;
+      height: 121px;
+      padding: 0 20px;
+      button{
+        label{
+          width:50px;
+          span{
+            border-radius:10px;
+            height: 4px;
+            margin: 6px 0;
+          }
+          span:nth-of-type(1){
+            width:100%;
+          }
+          span:nth-of-type(2){
+            width:100%;
+          }
+
+          span:nth-of-type(3){
+           display: none;
+          }
+
+          input[type="checkbox"]{
+            display:none;
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+            transform-origin: bottom;
+            transform: rotatez(45deg) translate(5px, 5px)
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+
+            transform-origin: top;
+            transform: rotatez(-45deg) translate(5px, -5px)
+          }
+        }
+
+      }
+      p{
+        margin: 0 0 0 50px;
+        font-size: 35px;
+      }
+    }
+
+    .kataliglar{
+      width: 980px;
+      margin: 0 auto 20px auto ;
+      button{
+        width: 125px;
+        height: 45px;
+        font-size: 15px;
+        line-height: 28px;
+        margin: 0 15px 15px 0;
+        border-radius: 10px;
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+
+      .rowFluid {
+        padding: 0;
+        width: 985px;
+        margin: 0 auto;
+
+        .Kitob_card {
+          margin-top: 30px;
+          width: 470px;
+          height: 400px;
+          padding: 30px;
+          border-radius: 20px;
+
+          .boxcha {
+            padding-bottom: 10px;
+
+            .left {
+              img {
+                width: 180px;
+                height: 250px;
+              }
+            }
+
+            .right {
+              padding: 0 12px 0 30px;
+
+              .title {
+                margin-top: 0;
+                font-size: 28px;
+                line-height: 30px;
+              }
+
+              p {
+                height: 120px;
+                margin-top: 20px;
+                font-size: 15px;
+                line-height: 19px;
+              }
+
+              img {
+                margin-top: 0px;
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+
+          }
+
+          .downloadFooter {
+            height: 50px;
+
+            .left {
+              img {
+                width: 21.74px;
+                margin-right: 10px;
+              }
+            }
+
+            .right {
+              button {
+                width: 150px;
+                height: 43px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+
+        ul{
+          .previous{
+            width: 100px;
+            height: 40px;
+            border-radius: 42px;
+            a{
+              font-weight: 700;
+              font-size: 14px;
+              letter-spacing: .5px;
+            }
+          }
+          .next{
+            width: 100px;
+            height: 40px;
+            border-radius: 42px;
+            a{
+              font-size: 14px;
+              letter-spacing: .5px;
+            }
+          }
+
+          .selected{
+            border-bottom: 3px solid #4470B2;
+            a{
+              font-size: 15px;
+            }
+          }
+          li{
+            width: 35px;
+            height: 90%;
+            a{
+              font-size: 12px;
+              line-height: 59px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+@media (max-width: 1510px) and (min-width: 1275px) {
+  .kitoblar-box{
+    width: 100%;
+    .kitoblar{
+      width: 100%;
+      height: 100vh;
+      padding-top: 20px;
+      .line {
+        padding: 60px 60px;
+        margin: 0 auto;
+        width: 1200px;
+        height: 652px;
+        .asosiyLink{
+          font-size: 18px;
+          line-height: 25px;
+        }
+        .libLogo {
+          width: 370px;
+          height: 153px;
+          margin: 30px auto !important;
+
+        }
+        .text{
+          margin: 61px auto 27px auto;
+          width: 903px;
+          font-size: 28px;
+        }
+
+        .serch {
+          width: 739px;
+          height: 58px;
+          margin: 40px auto;
+          input {
+            padding: 20px 120px 20px 50px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+            &::placeholder {
+              font-size: 14px;
+              line-height: 130%;
+            }
+          }
+
+          button {
+            top: 10px;
+            right: 50px;
+
+          }
+        }
+      }
+    }
+
+    .katalig{
+      width: 100%;
+      height: 141px;
+      padding: 0 60px;
+      button{
+        label{
+          width:60px;
+          span{
+            border-radius:10px;
+            height:5px;
+            margin: 7px 0;
+          }
+
+          span:nth-of-type(1){
+            width:50%;
+          }
+          span:nth-of-type(2){
+            width:100%;
+          }
+
+          span:nth-of-type(3){
+            width:77%;
+
+          }
+
+          input[type="checkbox"]{
+            display:none;
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(1){
+            transform-origin:bottom;
+            transform:rotatez(45deg) translate(8px,0px)
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(2){
+
+            transform-origin:top;
+            transform:rotatez(-45deg)
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(3){
+
+            transform-origin:bottom;
+            width:55%;
+            transform: translate(26px,-11px) rotatez(45deg);
+
+          }
+
+        }
+
+      }
+      p{
+        margin: 0 0 0 50px;
+        font-size: 40px;
+      }
+    }
+
+    .kataliglar{
+      width: 1200px;
+      margin: 0 auto 20px auto ;
+      button{
+        width: 155px;
+        height: 50px;
+        left: 121px;
+        top: 1133px;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0 15px 15px 0;
+        border-radius: 15px;
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+
+      .rowFluid {
+        padding: 0;
+        width: 1200px;
+        margin: 0 auto;
+        .Kitob_card {
+          margin-top: 30px;
+          width: 580px;
+          height: 430px;
+          padding: 30px;
+          border-radius: 25px;
+
+          .boxcha {
+            padding-bottom: 10px;
+
+            .left {
+              img {
+                width: 220px;
+                height: 300px;
+              }
+            }
+
+            .right {
+              padding: 0 22px 0 30px;
+
+              .title {
+                margin-top: 20px;
+                font-size: 30px;
+                line-height: 30px;
+              }
+
+              p {
+                height: 120px;
+                margin-top: 20px;
+                font-size: 18px;
+                line-height: 19px;
+              }
+
+              img {
+                margin-top: 0px;
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+
+          }
+
+          .downloadFooter {
+            height: 50px;
+
+            .left {
+              img {
+                width: 21.74px;
+                margin-right: 10px;
+              }
+            }
+
+            .right {
+              button {
+                width: 150px;
+                height: 43px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+        ul{
+          .previous{
+            width: 130px;
+            height: 40px;
+            border-radius: 42px;
+            a{
+              font-weight: 700;
+              font-size: 14px;
+              letter-spacing: .5px;
+            }
+          }
+          .next{
+            width: 130px;
+            height: 40px;
+            border-radius: 42px;
+            a{
+              font-weight: 700;
+              font-size: 16px;
+              letter-spacing: .5px;
+            }
+          }
+
+          .selected{
+            border-bottom: 3px solid #4470B2;
+            a{
+              font-size: 18px;
+            }
+          }
+          li{
+            width: 40px;
+            height: 90%;
+            a{
+              font-size: 15px;
+              line-height: 59px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+@media (max-width: 1650px) and (min-width: 1510px) {
+  .kitoblar-box{
+    width: 100%;
+    .kitoblar{
+      width: 100%;
+      height: 100vh;
+      padding-top: 50px;
+      .line {
+        padding: 60px 60px;
+        margin: 0 auto;
+        width: 1200px;
+        height: 652px;
+        .asosiyLink{
+          font-size: 18px;
+          line-height: 25px;
+        }
+        .libLogo {
+          width: 370px;
+          height: 153px;
+          margin: 30px auto !important;
+
+        }
+        .text{
+          margin: 61px auto 27px auto;
+          width: 903px;
+          font-size: 28px;
+        }
+
+        .serch {
+          width: 739px;
+          height: 58px;
+          margin: 40px auto;
+          input {
+            padding: 20px 120px 20px 50px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+            &::placeholder {
+              font-size: 14px;
+              line-height: 130%;
+            }
+          }
+
+          button {
+            top: 10px;
+            right: 50px;
+
+          }
+        }
+      }
+    }
+
+    .katalig{
+      width: 100%;
+      height: 171px;
+      padding: 0 80px;
+      button{
+        label{
+          width:60px;
+          span{
+            border-radius:10px;
+            height:5px;
+            margin: 7px 0;
+          }
+
+          span:nth-of-type(1){
+            width:50%;
+          }
+          span:nth-of-type(2){
+            width:100%;
+          }
+
+          span:nth-of-type(3){
+            width:77%;
+
+          }
+
+          input[type="checkbox"]{
+            display:none;
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(1){
+            transform-origin:bottom;
+            transform:rotatez(45deg) translate(8px,0px)
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(2){
+
+            transform-origin:top;
+            transform:rotatez(-45deg)
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(3){
+
+            transform-origin:bottom;
+            width:55%;
+            transform: translate(26px,-11px) rotatez(45deg);
+
+          }
+
+        }
+
+      }
+      p{
+        margin: 0 0 0 50px;
+        font-size: 40px;
+      }
+    }
+
+    .kataliglar{
+      width: 1400px;
+      margin: 0 auto 40px auto ;
+      button{
+        width: 208px;
+        height: 58px;
+        left: 121px;
+        top: 1133px;
+        font-size: 24px;
+        line-height: 28px;
+        margin: 0 30px 30px 0;
+        border-radius: 20px;
+      }
+    }
+
+    .container-fluid {
+      .rowFluid {
+        width: 1400px;
+        margin: 0 auto;
+
+        .Kitob_card {
+          margin-top: 30px;
+          width: 680px;
+          height: 530px;
+          padding: 30px;
+          border-radius: 25px;
+
+          .boxcha {
+            padding-bottom: 10px;
+
+            .left {
+              img {
+                width: 300px;
+                height: 400px;
+              }
+            }
+
+            .right {
+              padding: 0 22px 0 30px;
+
+              .title {
+                margin-top: 20px;
+                font-size: 30px;
+                line-height: 30px;
+              }
+
+              p {
+                height: 150px;
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 25px;
+              }
+
+              img {
+                margin-top: 30px;
+                width: 90px;
+                height: 90px;
+              }
+            }
+
+
+          }
+
+          .downloadFooter {
+            height: 50px;
+
+            .left {
+              img {
+                width: 21.74px;
+                margin-right: 10px;
+              }
+            }
+
+            .right {
+              button {
+                width: 180px;
+                height: 43px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+@media (max-width: 1710px) and (min-width: 1650px) {
+  .kitoblar-box{
+    width: 100%;
+    .kitoblar{
+      width: 100%;
+      height: 100vh;
+      padding-top: 50px;
+
+      .line {
+        padding: 40px 60px;
+        margin: 0 auto;
+        width: 1200px;
+        height: 652px;
+        .asosiyLink{
+          font-size: 18px;
+          line-height: 25px;
+        }
+        .libLogo {
+          width: 370px;
+          height: 153px;
+          margin: 30px auto !important;
+
+        }
+        .text{
+          margin: 61px auto 27px auto;
+          width: 903px;
+          font-size: 28px;
+        }
+
+        .serch {
+          width: 739px;
+          height: 58px;
+          margin: 40px auto;
+          input {
+            padding: 20px 120px 20px 50px;
+            border-radius: 13.4402px;
+            letter-spacing: 1.5px;
+            &::placeholder {
+              font-size: 14px;
+              line-height: 130%;
+            }
+          }
+
+          button {
+            top: 10px;
+            right: 50px;
+
+          }
+        }
+      }
+    }
+
+    .katalig{
+      width: 100%;
+      height: 171px;
+      padding: 0 125px;
+      button{
+        label{
+          width:60px;
+          span{
+            border-radius:10px;
+            height:5px;
+            margin: 7px 0;
+          }
+
+          span:nth-of-type(1){
+            width:50%;
+          }
+          span:nth-of-type(2){
+            width:100%;
+          }
+
+          span:nth-of-type(3){
+            width:77%;
+
+          }
+
+          input[type="checkbox"]{
+            display:none;
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(1){
+            transform-origin:bottom;
+            transform:rotatez(45deg) translate(8px,0px)
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(2){
+
+            transform-origin:top;
+            transform:rotatez(-45deg)
+          }
+
+          input[type="checkbox"]:checked ~ span:nth-of-type(3){
+
+            transform-origin:bottom;
+            width:55%;
+            transform: translate(26px,-11px) rotatez(45deg);
+
+          }
+
+        }
+
+      }
+      p{
+        margin: 0 0 0 50px;
+        font-size: 40px;
+      }
+    }
+
+    .kataliglar{
+      width: 1510px;
+      margin: 0 auto 40px auto ;
+      button{
+        width: 208px;
+        height: 58px;
+        left: 121px;
+        top: 1133px;
+        font-size: 24px;
+        line-height: 28px;
+        margin: 0 30px 30px 0;
+        border-radius: 20px;
+      }
+    }
+
+    .container-fluid {
+      .rowFluid {
+        width: 1510px;
+        margin: 0 auto;
+
+        .Kitob_card {
+          margin-top: 30px;
+          width: 720px;
+          height: 546px;
+          padding: 40px;
+          border-radius: 30px;
+
+          .boxcha {
+            padding-bottom: 20px;
+
+            .left {
+              img {
+                width: 259px;
+                height: 364px;
+              }
+            }
+
+            .right {
+              padding: 0 22px 0 43px;
+
+              .title {
+                margin-top: 20px;
+                font-size: 30px;
+                line-height: 35px;
+              }
+
+              p {
+                height: 120px;
+                margin-top: 21px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 23px;
+                justify-content: center;
+                color: #44484E;
+
+              }
+
+              img {
+                margin-top: 24px;
+                width: 104px;
+                height: 104px;
+              }
+            }
+
+
+          }
+
+          .downloadFooter {
+            height: 70px;
+
+            .left {
+              img {
+                width: 21.74px;
+                margin-right: 10px;
+              }
+            }
+
+            .right {
+              button {
+                width: 252px;
+                height: 43px;
+                border-radius: 47px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
 }

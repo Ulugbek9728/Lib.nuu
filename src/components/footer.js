@@ -10,17 +10,17 @@ function Footer(props) {
             <div className="logo">
                 <img src="../img/logo_lib.svg" alt=""/>
             </div>
-           <div className="container-fluid">
+            <div className="container-fluid">
                <div className="row">
-                   <div className="karta col-3">
+                   <div className="karta col-md-3 col-12">
                        <img src="../img/logo Milliy  2 (Traced).png" alt=""/>
                    </div>
-                   <div className="karta col-3">
+                   <div className="karta col-md-3 col-12">
                        <div className='box'>
                            <Link to="/Kitoblar">Kitoblar</Link>
                        </div>
                        <div className='box'>
-                           <Link to="/Yangiliklar">Biz Haqimizda</Link>
+                           <Link to="#">Kitob buyurtma</Link>
                        </div>
                        <div className='box'>
                            <Link to="/Yangiliklar">Yangiliklar</Link>
@@ -29,7 +29,7 @@ function Footer(props) {
                            <Link to="#">O'zbek</Link>
                        </div>
                    </div>
-                   <div className="karta col-3">
+                   <div className="karta col-md-3 col-12">
                        <div className="box">
                            <a href="#">
                                <img src="../img/Group 60.png" alt=""/>
@@ -49,7 +49,7 @@ function Footer(props) {
                            </a>
                        </div>
                    </div>
-                   <div className="karta col-3">
+                   <div className="karta col-md-3 col-12">
                        <YMaps>
                            <div>
                                <Map className="maps"
