@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState,} from 'react';
 import {Link} from 'react-router-dom';
 import {Parallax} from 'react-parallax';
 import CountUp from 'react-countup';
@@ -17,6 +17,18 @@ function Main(props) {
         AOS.init()
     });
 
+    const [statistika, setStatistika]=useState(false);
+    
+    function chengStatixtka() {
+        if (window.scrollY>=3800){
+            setStatistika(true)
+        }
+
+    }
+    console.log(statistika);
+
+    window.addEventListener('scroll',chengStatixtka);
+
     return (
         <>
             <div className="main">
@@ -28,48 +40,72 @@ function Main(props) {
                 </div>
                 <div className="box">
                     <div className="line">
-                        <nav className="navbar navbar-expand-md">
-                            <a href="https://nuu.uz/" className="navbar-brand" target="_blank">
-                                <img src="./img/logo_Milliy.svg" alt=""/>
-                            </a>
-                            <button type="button" className="navbar-toggler knopka" data-bs-toggle="collapse"
-                                    data-bs-target="#myCollapse">
-                                <label htmlFor="check">
-                                    <input type="checkbox" id="check"/>
-                                    <span></span>
-                                    <span></span>
-                                </label>
-                            </button>
-                            <div className="collapse navbar-collapse" id="myCollapse">
-                                <ul className="navbar-nav">
-                                    <li className="nav-item">
-                                        <Link to="/Kitoblar">
-                                            <button className='btn'>Kitoblar</button>
-                                        </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link to="#" target='_blank'>
-                                            <button className='btn'>Kitob buyurtma</button>
-                                        </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link to="/Yangiliklar">
-                                            <button className='btn'>Yangiliklar</button>
-                                        </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link to="#">
-                                            <button className='btn'>Uzb</button>
-                                        </Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link to="/Admin">
-                                            <button className='btn'>Kirish</button>
-                                        </Link>
-                                    </li>
+                            <nav className="navbar navbar-expand-md">
+                                <a href="https://nuu.uz/" className="navbar-brand" target="_blank">
+                                    <img src="./img/logo_Milliy.svg" alt=""/>
+                                </a>
+                                <div className="dropdown dropstart text-end navbar-toggler">
+                                    <button type="button" className="dropdown-toggle"
+                                            data-bs-toggle="dropdown">
+                                        UZB
+                                    </button>
+                                    <ul className="dropdown-menu">
+                                        <li><a className="dropdown-item" href="#">UZB</a></li>
+                                        <li><a className="dropdown-item" href="#">РУС</a></li>
+                                        <li><a className="dropdown-item" href="#">ENG</a></li>
+                                    </ul>
+                                </div>
+                                <button type="button" className="navbar-toggler knopka" data-bs-toggle="collapse"
+                                        data-bs-target="#myCollapse">
+                                    <label htmlFor="check">
+                                        <input type="checkbox" id="check"/>
+                                        <span></span>
+                                        <span></span>
+                                    </label>
+                                </button>
+
+                                <div className="collapse navbar-collapse" id="myCollapse">
+                                    <ul className="navbar-nav">
+                                        <li className="nav-item">
+                                            <Link to="/Kitoblar">
+                                                <button className='btn'>Kitoblar</button>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a href="http://t.me/nuulibbot" target='_blank'>
+                                                <button className='btn'>Kitob buyurtma</button>
+                                            </a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link to="/Yangiliklar">
+                                                <button className='btn'>Yangiliklar</button>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link to="#">
+                                                <button className='btn' data-bs-toggle="collapse"
+                                                        data-bs-target="#Til">Uzb
+                                                </button>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link to="/Admin">
+                                                <button className='btn'>Kirish</button>
+                                            </Link>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </nav>
+                        <div className="CollapseBox">
+                            <div id="Til" className="collapse">
+                                <ul className="TilCollapse">
+                                    <li><a href="#">РУС</a></li>
+                                    <li><a href="#">ENG</a></li>
                                 </ul>
                             </div>
-                        </nav>
+                        </div>
+
                         <div className="libLogo">
                             <img src="./img/logo_lib.svg" alt=""/>
                         </div>
@@ -81,7 +117,7 @@ function Main(props) {
 
                         </div>
                         <div className="title">
-                            Mirzo ulug’bek nomidagi O’zbekiston milliy universiteti kutubxonosining rasmiy veb sayti, 70
+                            Mirzo ulug’bek nomidagi O’zbekiston milliy universiteti kutubxonosining veb sayti, 70
                             mingdan ziyod elektron kitoblar mavjud.
                         </div>
                     </div>
@@ -98,9 +134,9 @@ function Main(props) {
                 <div className="container-fluid">
                     <div className="row rowFluid">
                         <div className="col-lg-6"
-                         data-aos="fade-right"
-                         data-aos-duration="1000"
-                         data-aos-easing="ease-in-sine">
+                             data-aos="fade-right"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -128,9 +164,9 @@ function Main(props) {
                             </div>
                         </div>
                         <div className="col-lg-6"
-                         data-aos="fade-left"
-                         data-aos-duration="1200"
-                         data-aos-easing="ease-in-sine">
+                             data-aos="fade-left"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -157,9 +193,9 @@ function Main(props) {
                             </div>
                         </div>
                         <div className="col-lg-6"
-                         data-aos="fade-right"
-                         data-aos-duration="1200"
-                         data-aos-easing="ease-in-sine">
+                             data-aos="fade-right"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -187,9 +223,9 @@ function Main(props) {
                             </div>
                         </div>
                         <div className="col-lg-6"
-                         data-aos="fade-left"
-                         data-aos-duration="1200"
-                         data-aos-easing="ease-in-sine">
+                             data-aos="fade-left"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -216,9 +252,9 @@ function Main(props) {
                             </div>
                         </div>
                         <div className="col-lg-6"
-                         data-aos="fade-right"
-                         data-aos-duration="1200"
-                         data-aos-easing="ease-in-sine">
+                             data-aos="fade-right"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -246,9 +282,9 @@ function Main(props) {
                             </div>
                         </div>
                         <div className="col-lg-6"
-                         data-aos="fade-left"
-                         data-aos-duration="1200"
-                         data-aos-easing="ease-in-sine">
+                             data-aos="fade-left"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="Kitob_card">
                                 <div className="boxcha">
                                     <div className="left">
@@ -274,17 +310,26 @@ function Main(props) {
                                 </div>
                             </div>
                         </div>
-                        <button className="btn barchasi">
+                        <button className="btn barchasi"
+                                data-aos="zoom-in"
+                                data-aos-duration="1200"
+                                data-aos-easing="ease-in-sine">
                             <Link to="/Kitoblar"> Barchasini korish</Link>
                         </button>
 
-                        <div className="titleYangi">Yangiliklar</div>
+                        <div className="titleYangi"
+                             data-aos="fade-right"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">Yangiliklar</div>
                     </div>
                 </div>
                 <hr/>
                 <div className="container-fluid">
                     <div className="row rowFluid">
-                        <div className="col-xl-6 col-12 yangilikBox">
+                        <div className="col-xl-6 col-12 yangilikBox"
+                             data-aos="fade-up"
+                             data-aos-duration="1200"
+                             data-aos-easing="ease-in-sine">
                             <div className="yangilik">
                                 <div className="ten">
                                     <p>Meet the family keeping
@@ -300,7 +345,10 @@ function Main(props) {
                         </div>
                         <div className="col-xl-6 col-12 Yangiliklar">
                             <div className="row">
-                                <div className="col-6 right">
+                                <div className="col-6 right"
+                                     data-aos="zoom-in"
+                                     data-aos-duration="1200"
+                                     data-aos-easing="ease-in-sine">
                                     <img src="./img/women.png" alt=""/>
                                     <p>
                                         Krestian Stewn Was Seen ILaving Lunch in toronto with Boyfriend
@@ -314,7 +362,10 @@ function Main(props) {
                                         <button className='btn'>Batafsil</button>
                                     </div>
                                 </div>
-                                <div className="col-6 right">
+                                <div className="col-6 right"
+                                     data-aos="zoom-in"
+                                     data-aos-duration="1200"
+                                     data-aos-easing="ease-in-sine">
                                     <img src="./img/men.png" alt=""/>
                                     <p>
                                         Krestian Stewn Was Seen ILaving Lunch in toronto with Boyfriend
@@ -328,7 +379,10 @@ function Main(props) {
                                         <button className='btn'>Batafsil</button>
                                     </div>
                                 </div>
-                                <div className="col-6 right">
+                                <div className="col-6 right"
+                                     data-aos="zoom-in"
+                                     data-aos-duration="1200"
+                                     data-aos-easing="ease-in-sine">
                                     <img src="./img/women.png" alt=""/>
                                     <p>
                                         Krestian Stewn Was Seen ILaving Lunch in toronto with Boyfriend
@@ -342,7 +396,10 @@ function Main(props) {
                                         <button className='btn'>Batafsil</button>
                                     </div>
                                 </div>
-                                <div className="col-6 right">
+                                <div className="col-6 right"
+                                     data-aos="zoom-in"
+                                     data-aos-duration="1200"
+                                     data-aos-easing="ease-in-sine">
                                     <img src="./img/men.png" alt=""/>
                                     <p>
                                         Krestian Stewn Was Seen ILaving Lunch in toronto with Boyfriend
@@ -365,24 +422,29 @@ function Main(props) {
                     <div className="statistika">
                         <div className="container">
                             <div className="row">
-                                <div className="col-md-3 col-6">
+                                <div className="col-md-3 col-6"
+                                data-aos="zoom-in"
+                                data-aos-duration="1200"
+                                data-aos-easing="ease-in-sine">
                                     <CountUp
-                                        start={0}
-                                        end={695}
+                                        start={statistika ? 0 : null}
+                                        end={2379}
                                         delay={0}
                                         duration={3}
                                     >
-
                                         {({countUpRef}) => (
                                             <p className="CountUp" ref={countUpRef}></p>
                                         )}
                                     </CountUp>
                                     <p className="barcha">Umumiy kitobxonlar soni</p>
                                 </div>
-                                <div className="col-md-3 col-6">
+                                <div className="col-md-3 col-6"
+                                data-aos="zoom-in"
+                                data-aos-duration="1200"
+                                data-aos-easing="ease-in-sine">
                                     <CountUp
-                                        start={0}
-                                        end={753}
+                                        start={statistika ? 0 : null}
+                                        end={79052}
                                         delay={0}
                                         duration={3}
                                     >
@@ -394,10 +456,13 @@ function Main(props) {
                                     </CountUp>
                                     <p className="barcha">Axborat-resurs markazi fondi</p>
                                 </div>
-                                <div className="col-md-3 col-6">
+                                <div className="col-md-3 col-6"
+                                data-aos="zoom-in"
+                                data-aos-duration="1200"
+                                data-aos-easing="ease-in-sine">
                                     <CountUp
-                                        start={0}
-                                        end={813}
+                                        start={statistika ? 0 : null}
+                                        end={1813}
                                         delay={0}
                                         duration={3}
                                     >
@@ -409,10 +474,13 @@ function Main(props) {
                                     </CountUp>
                                     <p className="barcha">Elektron resurslar soni</p>
                                 </div>
-                                <div className="col-md-3 col-6">
+                                <div className="col-md-3 col-6"
+                                data-aos="zoom-in"
+                                data-aos-duration="1200"
+                                data-aos-easing="ease-in-sine">
                                     <CountUp
-                                        start={0}
-                                        end={561}
+                                        start={statistika ? 0 : null}
+                                        end={2061}
                                         delay={0}
                                         duration={3}
                                     >
@@ -429,9 +497,12 @@ function Main(props) {
                         <div className="numberStatic"></div>
                     </div>
                 </Parallax>
-                <div className="galereya">Foto Galereya</div>
-                <hr/>
 
+                <div className="galereya"
+                     data-aos="fade-right"
+                     data-aos-duration="1200"
+                     data-aos-easing="ease-in-sine">Foto Galereya</div>
+                <hr/>
                 <OwlCarousel
                     className="owl-theme"
                     items="3"
@@ -441,9 +512,11 @@ function Main(props) {
                     loop={true}
                     dots={false}
                     responsive={
-                        {0:{items:2},
-                        992:{items:2},
-                        1000:{items:3}}
+                        {
+                            0: {items: 2},
+                            992: {items: 2},
+                            1000: {items: 3}
+                        }
                     }>
                     <div className="item">
                         <img src="./img/galerey1.png" alt=""/>
@@ -465,7 +538,6 @@ function Main(props) {
                     </div>
 
                 </OwlCarousel>
-
             </div>
 
             <Footer/>

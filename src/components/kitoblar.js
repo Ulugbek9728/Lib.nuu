@@ -78,7 +78,7 @@ function Kitoblar(props) {
                             <img src="../img/logo_lib.svg" alt=""/>
                         </div>
                         <div className="text">
-                            Mirzo ulug’bek nomidagi O’zbekiston milliy universiteti kutubxonosining rasmiy veb sayti, 70
+                            Mirzo ulug’bek nomidagi O’zbekiston milliy universiteti kutubxonosining veb sayti, 70
                             mingdan
                             ziyod elektron kitoblar mavjud.
                         </div>

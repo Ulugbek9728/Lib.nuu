@@ -59,6 +59,7 @@
     height: 100vh;
 
     .line {
+      position: relative;
       padding: 40px 60px;
       margin: 100px auto;
       width: 1520px;
@@ -75,19 +76,60 @@
         align-items: center;
         padding: 0 30px;
 
+        .dropdown {
+          width: 70px;
+          height: 44px;
+          padding: 0;
+          margin: 19px 0 0 250px;
+
+          .dropdown-toggle {
+            padding: 0;
+            background: rgba(66, 59, 59, 0.4);
+            box-sizing: border-box;
+            backdrop-filter: blur(2px);
+            border-radius: 8px;
+            border: none;
+            width: 100%;
+            font-size: 18px;
+            height: 100%;
+            overflow: hidden;
+            color: white;
+
+            &:focus {
+              box-shadow: none;
+              border: none;
+              outline: none;
+            }
+
+          }
+
+          .show {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(66, 59, 59, 0.4);
+
+            .dropdown-item {
+              width: 50px !important;
+              color: white;
+            }
+          }
+        }
+
         .knopka {
           background: rgba(66, 59, 59, 0.4);
-          border: 1.5px solid #FFFFFF;
           box-sizing: border-box;
           backdrop-filter: blur(2px);
           border-radius: 8px;
           width: 50px;
-          height: 50px;
+          height: 42px;
           padding: 3px;
           margin-top: 20px;
           overflow: hidden;
+
           &:focus {
-            outline: none;
+            box-shadow: none;
           }
 
           label {
@@ -151,13 +193,11 @@
 
             .nav-item {
               width: 155px;
-              height: 50px;
               margin-left: 20px;
-
               a {
                 text-decoration: none;
                 width: 100%;
-                height: 100%;
+                height: 50px;
                 transition: .6s ease;
 
                 &:hover {
@@ -188,6 +228,40 @@
           }
         }
 
+      }
+
+      .CollapseBox{
+        position: absolute;
+        top: 120px;
+        right: 265px;
+        width: 155px;
+        height: 100px;
+        .TilCollapse {
+          list-style: none;
+          width: 155px;
+          height: 100px;
+          background: rgba(66, 59, 59, 0.4);
+          border: 1.5px solid #FFFFFF;
+          box-sizing: border-box;
+          backdrop-filter: blur(2px);
+          border-radius: 13.4402px;
+          padding: 10px 0 0 0;
+          margin: 0;
+
+          li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 45%;
+
+            a {
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 25px;
+              color: #FFFFFF;
+            }
+          }
+        }
       }
 
       .libLogo {
@@ -250,6 +324,7 @@
         font-weight: 600;
         font-size: 30px;
         line-height: 130%;
+        letter-spacing: .5px;
         text-align: center;
         text-transform: uppercase;
         color: #FFFFFF;
@@ -557,7 +632,6 @@
 
 }
 
-
 @keyframes carusel_1 {
   0% {
     transform: scale(1, 1);
@@ -643,37 +717,61 @@
   .main {
     .CaruselBox {
       width: 100vw;
-      height: 270px;
+      height: 300px;
     }
 
     .box {
       width: 100vw;
-      height: 270px;
+      height: 300px;
 
       .line {
         padding: 10px 0;
         margin: 0 auto;
-        width: 370px;
-        height: 270px;
-        background: inherit;
+        width: 375px;
+        height: 300px;
+        background: none;
 
         .navbar {
           align-items: normal;
           width: 100%;
           height: 45px;
 
+          .dropdown {
+            width: 55px;
+            height: 30px;
+            padding: 0;
+            margin: 19px 0 0 130px;
+
+            .dropdown-toggle {
+              border-radius: 8px;
+              width: 100%;
+              font-size: 14px;
+              height: 100%;
+            }
+
+            .show {
+              .dropdown-item {
+                font-size: 14px;
+                padding: 0;
+                height: 10px;
+                width: 50px !important;
+              }
+            }
+          }
+
           .knopka {
-            margin-top: 10px;
+            margin-top: 20px;
             border-radius: 5px;
             width: 30px;
-            height: 30px;
+            height: 28px;
             padding: 0;
 
             label {
               width: 25px;
+              margin: 0 auto;
 
               span {
-                height: 2px;
+                height: 1.5px;
                 margin: 5px 0;
               }
 
@@ -689,8 +787,8 @@
           }
 
           .navbar-brand {
-            width: 38px;
-            height: 48px;
+            width: 58px;
+            height: 68px;
 
             img {
               width: 100%;
@@ -699,39 +797,49 @@
           }
 
           .navbar-collapse {
-            width: 310px;
+            width: 320px;
 
             .navbar-nav {
               display: flex;
               flex-direction: row;
-              width: 310px;
-              margin-top: 0;
+              width: 200px;
+              margin: 0 auto;
               padding: 0;
 
               .nav-item {
                 width: 65px;
-                height: 20px;
+                height: 25px;
                 margin-left: 0;
                 margin-right: 5px;
 
                 a {
+
                   button {
                     padding: 1px;
                     border-radius: 5px;
-                    font-size: 8px;
+                    font-size: 10px;
                     line-height: 8px;
+                    letter-spacing: .5px;
                   }
 
                 }
+              }
+
+              .nav-item:nth-of-type(4) {
+                display: none;
+              }
+
+              .nav-item:nth-of-type(5) {
+                display: none;
               }
             }
           }
         }
 
         .libLogo {
-          width: 132px;
-          height: 53px;
-          margin: 30px auto 10px auto !important;
+          width: 142px;
+          height: 63px;
+          margin: 55px auto 10px auto !important;
         }
 
         .serch {
@@ -742,20 +850,23 @@
           input {
             padding: 0 40px 0 20px;
             border-radius: 8px;
+            border: 1px solid white;
             letter-spacing: 1.5px;
             height: 100% !important;
-            font-size: 8px;
+            font-size: 10px;
 
             &::placeholder {
-              font-size: 8px;
+              font-size: 10px;
             }
           }
+
           button {
             width: 15px;
             height: 15px;
             padding: 0;
-            top: 2px;
+            top: 0px;
             right: 15px;
+
             img {
               width: 15px;
               height: 15px;
@@ -764,9 +875,10 @@
         }
 
         .title {
-          width: 370px;
-          margin: 10px auto;
+          width: 330px;
+          margin: 20px auto;
           font-size: 12px;
+          font-weight: 500;
         }
       }
     }
@@ -1021,16 +1133,18 @@
     .box {
       width: 100vw;
       height: 450px;
+
       .line {
         padding: 10px 0;
         margin: 10px auto;
         width: 570px;
         height: 450px;
         background: inherit;
+
         .navbar {
           align-items: normal;
           width: 100%;
-          height: 100px;
+          height: 90px;
 
           .navbar-brand {
             width: 88px;
@@ -1043,15 +1157,17 @@
           }
 
           .navbar-collapse {
+            margin: 0;
             .navbar-nav {
+              width: 75%;
               display: flex;
               flex-direction: row;
-              margin-top: 10px;
+              margin: 10px auto 0 auto;
 
               .nav-item {
-                width: 80px;
+                width: 120px;
                 height: 35px;
-                margin-left: 15px;
+                margin-left: 0;
 
                 a {
                   button {
@@ -1060,16 +1176,26 @@
                     font-size: 15px;
                     line-height: 10px;
                   }
-
                 }
+              }
+
+              .nav-item:nth-of-type(4) {
+                display: none;
+              }
+
+              .nav-item:nth-of-type(5) {
+                display: none;
               }
             }
           }
         }
+        .CollapseBox{
+          display: none;
+        }
 
         .libLogo {
-          width: 300px;
-          height: 83px;
+          width: 320px;
+          height: 103px;
           margin: 40px auto 10px auto !important;
         }
 
@@ -1344,6 +1470,7 @@
         width: 760px;
         height: 450px;
         background: inherit;
+
         .navbar {
           width: 100%;
           height: 110px;
@@ -1374,11 +1501,41 @@
 
                 }
               }
+
+              .nav-item:nth-of-type(5) {
+                display: none;
+              }
             }
           }
 
 
+
         }
+        .CollapseBox{
+          top: 80px;
+          right: 30px;
+          width: 100px;
+          height: 75px;
+          .TilCollapse {
+            width: 100px;
+            height: 55px;
+            border: 1px solid #FFFFFF;
+            border-radius: 13.4402px;
+            padding: 5px 0 0 0;
+            margin: 0;
+
+            li {
+              height: 45%;
+
+              a {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 25px;
+              }
+            }
+          }
+        }
+
         .libLogo {
           width: 300px;
           height: 83px;
@@ -1389,6 +1546,7 @@
           width: 600px;
           height: 40px;
           margin: 20px auto;
+
           input {
             padding: 0 90px 0 50px;
             border-radius: 13.4402px;
@@ -1559,8 +1717,8 @@
             }
 
             p {
-              margin: 30px 0 40px 0;
-              font-size: 24px;
+              margin: 20px 0 20px 0;
+              font-size: 20px;
               line-height: 28px;
               height: 56px;
             }
@@ -1589,12 +1747,11 @@
               button {
                 width: 100px;
                 height: 30px;
-                background: #4470B2;
                 border-radius: 27.8902px;
-                font-weight: 400;
                 font-size: 16px;
                 line-height: 19px;
-                color: #FFFFFF;
+                padding: 0;
+
               }
             }
           }
@@ -1649,6 +1806,7 @@
     .CaruselBox {
       width: 100vw;
       height: 600px;
+
       img {
         width: 100%;
         height: 100%;
@@ -1658,6 +1816,7 @@
     .box {
       width: 100vw;
       height: 600px;
+
       .line {
         padding: 0 60px;
         margin: 10px auto;
@@ -1683,7 +1842,7 @@
             .navbar-nav {
               .nav-item {
                 width: 125px;
-                height: 45px;
+                height: 40px;
                 margin-left: 18px;
 
                 a {
@@ -1695,10 +1854,40 @@
 
                 }
               }
+
+              .nav-item:nth-of-type(5) {
+                display: none;
+              }
             }
+
           }
 
 
+        }
+
+        .CollapseBox{
+          top: 80px;
+          right: 89.5px;
+          width: 125px;
+          height: 92px;
+          .TilCollapse {
+            width: 125px;
+            height: 70px;
+            border: 1px solid #FFFFFF;
+            border-radius: 13.4402px;
+            padding: 10px 0 0 0;
+            margin: 0;
+
+            li {
+              height: 45%;
+
+              a {
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 25px;
+              }
+            }
+          }
         }
 
         .libLogo {
@@ -1979,19 +2168,23 @@
     .CaruselBox {
       width: 100vw;
       height: 100vh;
+
       img {
         width: 100%;
         height: 100%;
       }
     }
+
     .box {
       width: 100vw;
       height: 100vh;
+
       .line {
         padding: 40px 60px;
         margin: 10px auto;
         width: 1200px;
         height: 652px;
+
         .navbar {
           width: 100%;
           height: 110px;
@@ -2009,7 +2202,7 @@
           .navbar-nav {
             .nav-item {
               width: 135px;
-              height: 55px;
+              height: 40px;
               margin-left: 18px;
 
               a {
@@ -2019,6 +2212,39 @@
                   line-height: 25px;
                 }
 
+              }
+            }
+          }
+        }
+
+        .CollapseBox{
+          top: 120px;
+          right: 265px;
+          width: 155px;
+          height: 92px;
+          .TilCollapse {
+            list-style: none;
+            width: 155px;
+            height: 90px;
+            background: rgba(66, 59, 59, 0.4);
+            border: 1.5px solid #FFFFFF;
+            box-sizing: border-box;
+            backdrop-filter: blur(2px);
+            border-radius: 13.4402px;
+            padding: 10px 0 0 0;
+            margin: 0;
+
+            li {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 45%;
+
+              a {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #FFFFFF;
               }
             }
           }
@@ -2078,6 +2304,7 @@
         padding: 0;
         width: 1200px;
         margin: 0 auto;
+
         .Kitob_card {
           margin-top: 30px;
           width: 580px;
@@ -2322,14 +2549,17 @@
         height: 100%;
       }
     }
+
     .box {
       width: 100vw;
       height: 100vh;
+
       .line {
         padding: 40px 60px;
         margin: 50px auto;
         width: 1200px;
         height: 652px;
+
         .navbar {
           width: 100%;
           height: 110px;
@@ -2347,11 +2577,13 @@
           .navbar-nav {
             .nav-item {
               width: 135px;
-              height: 35px;
+              height: 40px;
               margin-left: 18px;
+
 
               a {
                 button {
+                  padding: 0;
                   border-radius: 13.4402px;
                   font-size: 18px;
                   line-height: 25px;
@@ -2361,6 +2593,28 @@
             }
           }
         }
+        .CollapseBox{
+          top: 120px;
+          right: 265px;
+          width: 155px;
+          height: 92px;
+          .TilCollapse {
+            width: 155px;
+            height: 90px;
+            border-radius: 13.4402px;
+            padding: 10px 0 0 0;
+            li {
+              height: 45%;
+
+              a {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+              }
+            }
+          }
+        }
+
         .libLogo {
           width: 370px;
           height: 153px;
@@ -2543,9 +2797,6 @@
             }
 
             .boxcha {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
               margin: 4px 0 40px 0;
 
               .left {
@@ -2559,7 +2810,6 @@
                   font-weight: 300;
                   font-size: 14px;
                   line-height: 16px;
-                  color: #44484E;
                 }
               }
 
@@ -2646,17 +2896,21 @@
     .box {
       width: 100vw;
       height: 100vh;
+
       .line {
         padding: 40px 60px;
         margin: 50px auto;
         width: 1200px;
         height: 652px;
+
         .navbar {
           width: 100%;
           height: 110px;
+
           .navbar-brand {
             width: 108px;
             height: 110px;
+
             img {
               width: 100%;
               height: 100%;
@@ -2666,16 +2920,50 @@
           .navbar-nav {
             .nav-item {
               width: 135px;
-              height: 35px;
+              height: 40px;
               margin-left: 18px;
 
               a {
                 button {
+                  padding: 0;
                   border-radius: 13.4402px;
                   font-size: 18px;
                   line-height: 25px;
                 }
 
+              }
+            }
+          }
+        }
+
+        .CollapseBox{
+          top: 120px;
+          right: 265px;
+          width: 155px;
+          height: 90px;
+          .TilCollapse {
+            list-style: none;
+            width: 155px;
+            height: 90px;
+            background: rgba(66, 59, 59, 0.4);
+            border: 1.5px solid #FFFFFF;
+            box-sizing: border-box;
+            backdrop-filter: blur(2px);
+            border-radius: 13.4402px;
+            padding: 10px 0 0 0;
+            margin: 0;
+
+            li {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 45%;
+
+              a {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #FFFFFF;
               }
             }
           }
@@ -2724,6 +3012,7 @@
       .rowFluid {
         width: 1510px;
         margin: 0 auto;
+
         .Kitob_card {
           margin-top: 30px;
           width: 720px;
@@ -2930,12 +3219,8 @@
 
     .galereya {
       margin: 70px 0 60px 100px;
-      text-align: left;
-      font-style: normal;
-      font-weight: 600;
       font-size: 40px;
       line-height: 130%;
-      color: #44484E;
     }
 
     .owl-theme {

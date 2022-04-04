@@ -20,13 +20,10 @@ function Footer(props) {
                            <Link to="/Kitoblar">Kitoblar</Link>
                        </div>
                        <div className='box'>
-                           <Link to="#">Kitob buyurtma</Link>
+                           <a href="http://t.me/nuulibbot" target="_blank">Kitob buyurtma</a>
                        </div>
                        <div className='box'>
                            <Link to="/Yangiliklar">Yangiliklar</Link>
-                       </div>
-                       <div className='box'>
-                           <Link to="#">O'zbek</Link>
                        </div>
                    </div>
                    <div className="karta col-md-3 col-12">
@@ -43,9 +40,9 @@ function Footer(props) {
                            </a>
                        </div>
                        <div className="box">
-                           <a href="">
+                           <a href="mailto:arm@nuu.uz" target='_blank'>
                                <img src="../img/Group 61.png" alt=""/>
-                               <div>arm.nuu@gmail.com</div>
+                               <div>arm@nuu.uz</div>
                            </a>
                        </div>
                    </div>
@@ -66,10 +63,10 @@ function Footer(props) {
            </div>
             <div className="bottomFooter">
                 <div className="text">
-                    Axborot texnologiyalar markazi 2022
+                    Raqamli Ta'lim texnologiyalari markazi 2022
                 </div>
-                <a href="https://telegram.me/creative_bro_01" target="_blank">
-                    <img src="../img/Creative bro.svg" alt=""/>
+                <a href="https://t.me/BR0_01" target="_blank">
+                    <img src="../img/Designed by Bro.svg" alt=""/>
                 </a>
             </div>
         </div>

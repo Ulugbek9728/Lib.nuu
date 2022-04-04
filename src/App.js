@@ -6,6 +6,7 @@ import Yangiliklar from './components/yangiliklar'
 import Admin from "./components/admin";
 
 import "./app.scss";
+import Batafsil from "./components/Batafsil";
 
 
 function App(props) {
@@ -15,6 +16,7 @@ function App(props) {
                 <Route path="/Kitoblar" element={<Kitoblar/>} />
                 <Route path="/Yangiliklar" element={<Yangiliklar/>} />
                 <Route path="/Admin" element={<Admin/>} />
+                <Route path="/Batafsil" element={<Batafsil/>} />
                 <Route path="/" element={<Main/>} />
             </Routes>
         </div>
