@@ -8,7 +8,7 @@ function Batafsil(props) {
         <>
             <div className='Batafsil'>
 
-                <nav className="navbar navbar-expand-md">
+                <nav className="navbar navbar-expand">
                     <Link to="/" className="navbar-brand">
                         <img src="./img/logo_lib.svg" alt=""/>
                     </Link>
@@ -51,6 +51,11 @@ function Batafsil(props) {
                             <li><a href="#">ENG</a></li>
                         </ul>
                     </div>
+                </div>
+                <div className="left">
+                    <Link to="/Yangiliklar">
+                        <button className='Asosiy'>Yangiliklar / Batafsil</button>
+                    </Link>
                 </div>
                 <div className="contetnBox">
                     <div className="left">

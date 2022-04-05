@@ -8,6 +8,7 @@
 .Batafsil{
   background-color: #fafafa;
   .navbar{
+    box-sizing: border-box;
     padding: 0 125px;
     background-color: #1F324F;
     width: 100%;
@@ -70,7 +71,6 @@
       }
 
     }
-
     .navbar-brand {
       width: 153px;
       height: 70px;
@@ -85,23 +85,21 @@
 
     .navbar-collapse {
       flex-direction: row-reverse;
-
       .navbar-nav {
         display: flex;
         justify-content: space-between;
         list-style: none;
-
         .nav-item {
           width: 155px;
+          height: 50px;
           margin-left: 20px;
           a {
             text-decoration: none;
             width: 100%;
-            height: 50px;
+            height: 100%;
             transition: .6s ease;
             button {
               box-sizing: border-box;
-              border-radius: 13.4402px;
               width: 100%;
               height: 100%;
               font-weight: 400;
@@ -116,6 +114,20 @@
     }
 
   }
+  .left{
+    .Asosiy{
+      margin-top: 50px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 34px;
+      color: white;
+      width: 300px;
+      height: 50px;
+      border: none;
+      border-radius: 0 10px 10px 0;
+      background-color: #1F324F;
+    }
+  }
   .CollapseBox{
     position: absolute;
     z-index: 1;
@@ -125,7 +137,7 @@
     height: 100px;
     .TilCollapse {
       list-style: none;
-      width: 155px;
+      width: 100%;
       height: 100px;
       background: rgba(66, 59, 59, 0.4);
       border: 1.5px solid #FFFFFF;
@@ -160,6 +172,8 @@
       width: 1116px;
       padding-bottom: 100px;
       .date{
+        display: flex;
+        align-items: center;
         img{
           width: 27px;
           height: 31px;
@@ -210,15 +224,15 @@
         width: 0;
       }
       .title{
+        box-sizing: border-box;
         position: absolute;
         top: 40px;
-        right: -290px;
+        right: 10px;
         background-color: #fafafa;
-
         padding-left: 20px;
         display: flex;
         align-items: center;
-        width: 820px;
+        width: 520px;
         height: 70px;
         img{
           width: 21px;
@@ -244,6 +258,8 @@
         box-sizing: border-box;
         box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.08), 4px 4px 20px rgba(0, 0, 0, 0.08);
         .date{
+          display: flex;
+          align-items: center;
           img{
             width: 27px;
             height: 31px;
@@ -265,6 +281,780 @@
           width: 384px;
           height: 128px;
           color: #44484E;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .Batafsil{
+    .navbar{
+      padding: 0 10px;
+      width: 100%;
+      height: 70px;
+      .navbar-brand {
+        width: 133px;
+        height: 50px;
+        margin: 0;
+      }
+      .navbar-collapse {
+        .navbar-nav {
+          .nav-item {
+            width: 60px;
+            height: 40px;
+            margin-left: 20px;
+            &:nth-of-type(2){
+              width: 85px;
+            }
+            a {
+              button {
+                padding: 0;
+                font-size: 12px;
+                line-height: 20px;
+              }
+
+            }
+          }
+
+        }
+      }
+    }
+    .left{
+      .Asosiy{
+        margin-top: 10px;
+        font-size: 10px;
+        line-height: 24px;
+        width: 140px;
+        height: 25px;
+        border-radius: 0 5px 5px 0;
+      }
+    }
+    .CollapseBox{
+      top: 70px;
+      right: 10px;
+      width: 60px;
+      height: 60px;
+      .TilCollapse {
+        height: 60px;
+        border-radius: 8px;
+        padding: 10px 0 0 0;
+        li {
+          height: 45%;
+          a {
+            font-size: 12px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    .contetnBox{
+      width: 345px;
+      margin: 0 auto;
+      padding: 30px 0;
+      .left{
+        width: 345px;
+        padding-bottom: 0;
+        .date{
+          img{
+            width: 15px;
+            height: 20px;
+          }
+          span{
+            margin-left: 12px;
+            font-size: 12px;
+            line-height: 15px;
+          }
+        }
+        .title{
+          margin: 15px 0 10px 0;
+          width: 340px;
+          font-size: 12px;
+          line-height: 15px;
+        }
+        .img{
+          width: 100%;
+          height: 200px;
+          border-radius: 10px;
+        }
+        .text{
+          margin-top: 10px;
+          font-size: 8px;
+          line-height: 120%;
+        }
+      }
+      .right{
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+  .Batafsil{
+    .navbar{
+      padding: 0 10px;
+      width: 100%;
+      height: 80px;
+      .navbar-brand {
+        width: 143px;
+        height: 60px;
+        margin: 0;
+      }
+      .navbar-collapse {
+        .navbar-nav {
+          .nav-item {
+            width: 80px;
+            height: 40px;
+            margin-left: 20px;
+            &:nth-of-type(2){
+              width: 110px;
+            }
+            a {
+              button {
+                padding: 0;
+                font-size: 15px;
+                line-height: 20px;
+              }
+
+            }
+          }
+
+        }
+      }
+    }
+    .left{
+      .Asosiy{
+        margin-top: 30px;
+        font-size: 15px;
+        line-height: 24px;
+        width: 200px;
+        height: 40px;
+        border-radius: 0 7px 7px 0;
+      }
+    }
+    .CollapseBox{
+      top: 79px;
+      right: 16px;
+      width: 85px;
+      height: 80px;
+      .TilCollapse {
+        height: 80px;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        padding: 10px 0 0 0;
+        li {
+          height: 45%;
+          a {
+            font-size: 15px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+    .contetnBox{
+      width: 570px;
+      margin: 0 auto;
+      padding: 30px 0;
+      .left{
+        width: 570px;
+        padding-bottom: 0;
+        .date{
+          img{
+            width: 15px;
+            height: 20px;
+          }
+          span{
+            margin-left: 12px;
+            font-size: 12px;
+            line-height: 15px;
+          }
+        }
+        .title{
+          margin-top: 15px;
+          width: 560px;
+          font-size: 25px;
+          line-height: 30px;
+        }
+        .img{
+          width: 100%;
+          height: 280px;
+          border-radius: 15px;
+        }
+        .text{
+          margin-top: 20px;
+          font-size: 12px;
+          line-height: 120%;
+        }
+      }
+      .right{
+       display: none;
+      }
+    }
+  }
+}
+@media (max-width: 992px) and (min-width: 767px) {
+  .Batafsil{
+    .navbar{
+      padding: 0 20px;
+      width: 100%;
+      height: 80px;
+      .navbar-brand {
+        width: 143px;
+        height: 60px;
+        margin: 0;
+      }
+      .navbar-collapse {
+        .navbar-nav {
+          .nav-item {
+            width: 80px;
+            height: 40px;
+            margin-left: 20px;
+            &:nth-of-type(2){
+              width: 130px;
+            }
+            a {
+              button {
+                padding: 0;
+                font-size: 15px;
+                line-height: 20px;
+              }
+
+            }
+          }
+
+        }
+      }
+
+    }
+    .left{
+      .Asosiy{
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 24px;
+        width: 250px;
+        height: 40px;
+        border-radius: 0 10px 10px 0;
+      }
+    }
+    .CollapseBox{
+      top: 79px;
+      right: 16px;
+      width: 85px;
+      height: 80px;
+      .TilCollapse {
+        height: 80px;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        padding: 10px 0 0 0;
+        li {
+          height: 45%;
+          a {
+            font-size: 15px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+    .contetnBox{
+      width: 760px;
+      margin: 0 auto;
+      padding: 30px 0;
+      .left{
+        width: 450px;
+        padding-bottom: 0;
+        .date{
+          img{
+            width: 15px;
+            height: 20px;
+          }
+          span{
+            margin-left: 12px;
+            font-size: 12px;
+            line-height: 15px;
+          }
+        }
+        .title{
+          margin-top: 15px;
+          width: 400px;
+          font-size: 30px;
+          line-height: 30px;
+        }
+        .img{
+          width: 100%;
+          height: 280px;
+          border-radius: 15px;
+        }
+        .text{
+          margin-top: 20px;
+          font-size: 16px;
+          line-height: 120%;
+        }
+      }
+      .right{
+        width: 310px;
+        height: 1550px;
+        padding: 58px 30px;
+        .title{
+          top: 30px;
+          right: 0;
+          padding-left: 20px;
+          width: 300px;
+          height: 70px;
+          img{
+            width: 15px;
+          }
+          p{
+            font-size: 22px;
+            line-height: 30px;
+            margin: 0 0 0 20px;
+          }
+        }
+        .box{
+          margin-top: 20px;
+          padding: 20px 20px;
+          width: 275px;
+          height: 150px;
+          border-radius: 5px;
+          box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.08), 3px 3px 10px rgba(0, 0, 0, 0.08);
+          .date{
+            img{
+              width: 15px;
+              height: 20px;
+            }
+            span{
+              margin-left: 12px;
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+          p{
+            margin-top: 8px;
+            font-size: 14px;
+            line-height: 15px;
+            width: 100%;
+            height: 128px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1275px) and (min-width: 992px) {
+  .Batafsil{
+    .navbar{
+      padding: 0 20px;
+      width: 100%;
+      height: 100px;
+      .navbar-brand {
+        width: 143px;
+        height: 60px;
+        margin: 0;
+      }
+      .navbar-collapse {
+        .navbar-nav {
+          .nav-item {
+            width: 80px;
+            height: 40px;
+            margin-left: 20px;
+            &:nth-of-type(2){
+              width: 130px;
+            }
+            a {
+
+              button {
+                padding: 0;
+                font-size: 17px;
+                line-height: 20px;
+              }
+
+            }
+          }
+
+        }
+      }
+
+    }
+    .left{
+      .Asosiy{
+        margin-top: 50px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 34px;
+        width: 300px;
+        height: 50px;
+        border-radius: 0 10px 10px 0;
+      }
+    }
+    .CollapseBox{
+      top: 99px;
+      right: 16px;
+      width: 85px;
+      height: 80px;
+      .TilCollapse {
+        height: 80px;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        padding: 10px 0 0 0;
+        li {
+          height: 45%;
+
+          a {
+            font-size: 18px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+    .contetnBox{
+      width: 985px;
+      margin: 0 auto;
+      padding: 40px 0;
+      .left{
+        width: 585px;
+        padding-bottom: 10px;
+        .date{
+          img{
+            width: 20px;
+            height: 24px;
+          }
+          span{
+            margin-left: 12px;
+            font-size: 15px;
+            line-height: 20px;
+          }
+        }
+        .title{
+          margin-top: 20px;
+          width: 500px;
+          font-size: 30px;
+          line-height: 37px;
+        }
+        .img{
+          width: 100%;
+          height: 380px;
+          border-radius: 22px;
+        }
+        .text{
+          margin-top: 35px;
+          font-size: 20px;
+          line-height: 120%;
+        }
+      }
+      .right{
+        width: 400px;
+        height: 1550px;
+        padding: 68px 50px;
+        .title{
+          top: 35px;
+          right: 0;
+          padding-left: 20px;
+          width: 370px;
+          height: 70px;
+          img{
+            width: 18px;
+          }
+          p{
+            font-size: 25px;
+            line-height: 35px;
+            margin: 0 0 0 20px;
+          }
+        }
+        .box{
+          margin-top: 20px;
+          padding: 20px 20px;
+          width: 330px;
+          height: 150px;
+          border-radius: 5px;
+          box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.08), 3px 3px 10px rgba(0, 0, 0, 0.08);
+          .date{
+            img{
+              width: 18px;
+              height: 22px;
+            }
+            span{
+              margin-left: 12px;
+              font-size: 15px;
+              line-height: 20px;
+            }
+          }
+          p{
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 20px;
+            width: 290px;
+            height: 128px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1510px) and (min-width: 1275px) {
+  .Batafsil{
+    .navbar{
+      padding: 0 70px;
+      width: 100%;
+      height: 100px;
+      .navbar-brand {
+        width: 153px;
+        height: 70px;
+        margin: 0;
+      }
+
+      .navbar-collapse {
+        .navbar-nav {
+          .nav-item {
+            width: 125px;
+            height: 40px;
+            margin-left: 20px;
+            &:nth-of-type(2){
+              width: 155px;
+            }
+            a {
+              button {
+                font-size: 18px;
+                line-height: 25px;
+              }
+
+            }
+          }
+
+        }
+      }
+
+    }
+    .left{
+      .Asosiy{
+        margin-top: 50px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 34px;
+        width: 300px;
+        height: 50px;
+        border-radius: 0 10px 10px 0;
+      }
+    }
+    .CollapseBox{
+      top: 99px;
+      right: 70px;
+      width: 125px;
+      height: 70px;
+      .TilCollapse {
+        width: 125px;
+        height: 70px;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        padding: 10px 0 0 0;
+        li {
+          height: 45%;
+
+          a {
+            font-size: 18px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+    .contetnBox{
+      width: 1200px;
+      margin: 0 auto;
+      padding: 40px 0;
+      .left{
+        width: 700px;
+        padding-bottom: 10px;
+        .date{
+          img{
+            width: 25px;
+            height: 29px;
+          }
+          span{
+            margin-left: 12px;
+            font-size: 18px;
+            line-height: 20px;
+          }
+        }
+        .title{
+          margin-top: 20px;
+          width: 650px;
+          font-size: 40px;
+          line-height: 47px;
+        }
+        .img{
+          width: 100%;
+          height: 500px;
+          border-radius: 22px;
+        }
+        .text{
+          margin-top: 35px;
+          font-size: 20px;
+          line-height: 145%;
+        }
+
+      }
+      .right{
+        width: 500px;
+        height: 1550px;
+        padding: 68px 50px;
+        .title{
+          top: 35px;
+          right: -30px;
+          padding-left: 20px;
+          width: 500px;
+          height: 70px;
+          img{
+            width: 21px;
+          }
+          p{
+            font-size: 30px;
+            line-height: 35px;
+            margin: 0 0 0 30px;
+          }
+        }
+        .box{
+          margin-top: 20px;
+          padding: 30px 20px;
+          width: 430px;
+          height: 210px;
+          border-radius: 5px;
+          box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.08), 3px 3px 10px rgba(0, 0, 0, 0.08);
+          .date{
+            img{
+              width: 25px;
+              height: 29px;
+            }
+            span{
+              margin-left: 12px;
+              font-size: 18px;
+              line-height: 20px;
+            }
+          }
+          p{
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 22px;
+            width: 365px;
+            height: 128px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1710px) and (min-width: 1510px) {
+  .Batafsil{
+    .left{
+      .Asosiy{
+        margin-top: 50px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 34px;
+        width: 300px;
+        height: 50px;
+        border-radius: 0 10px 10px 0;
+      }
+    }
+    .CollapseBox{
+      top: 100px;
+      right: 123px;
+      width: 155px;
+      height: 100px;
+      .TilCollapse {
+        width: 155px;
+        height: 100px;
+        border: 1.5px solid #FFFFFF;
+        border-radius: 13.4402px;
+        padding: 10px 0 0 0;
+        li {
+          height: 45%;
+
+          a {
+            font-size: 18px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+    .contetnBox{
+      width: 1400px;
+      margin: 0 auto;
+      padding: 50px 0;
+      .left{
+        width: 900px;
+        padding-bottom: 100px;
+        .date{
+          img{
+            width: 27px;
+            height: 31px;
+          }
+          span{
+            margin-left: 12px;
+            font-size: 20px;
+            line-height: 23px;
+          }
+        }
+        .title{
+          margin-top: 20px;
+          width: 686px;
+          font-size: 40px;
+          line-height: 47px;
+        }
+        .img{
+          width: 100%;
+          height: 600px;
+          border-radius: 25px;
+        }
+        .text{
+          margin-top: 35px;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 145%;
+        }
+
+      }
+      .right{
+        width: 500px;
+        height: 1550px;
+        padding: 68px 50px;
+        .title{
+          top: 40px;
+          right: -30px;
+          padding-left: 20px;
+          width: 500px;
+          height: 70px;
+          img{
+            width: 21px;
+            height: auto;
+          }
+          p{
+            font-size: 30px;
+            line-height: 35px;
+            margin: 0 0 0 30px;
+          }
+        }
+        .box{
+          margin-top: 20px;
+          padding: 30px 20px;
+          width: 430px;
+          height: 220px;
+          border-radius: 5px;
+          .date{
+            img{
+              width: 27px;
+              height: 31px;
+            }
+            span{
+              margin-left: 12px;
+              font-size: 20px;
+              line-height: 23px;
+            }
+          }
+          p{
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 25px;
+            width: 365px;
+            height: 128px;
+          }
         }
       }
     }

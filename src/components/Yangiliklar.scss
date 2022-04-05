@@ -80,7 +80,7 @@
       height: 790px;
       background: #F4F4F4;
       position: relative;
-      border-radius: 0px 25px 25px 0px;
+      border-radius: 0 25px 25px 0;
 
       h1{
         width: 665px;
@@ -109,10 +109,10 @@
         height: 49px;
         border-radius: 49px;
         background: #4470B2;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 29px;
         a{
-          font-weight: 400;
-          font-size: 25px;
-          line-height: 29px;
           color: #FFFFFF;
         }
       }
